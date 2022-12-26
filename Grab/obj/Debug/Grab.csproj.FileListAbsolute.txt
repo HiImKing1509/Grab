@@ -1,0 +1,17 @@
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Grab.exe.config
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Grab.exe
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Grab.pdb
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.AssemblyReference.cache
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.SuggestedBindingRedirects.cache
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Properties.Resources.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.GenerateResource.cache
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.CoreCompileInputs.cache
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.exe
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.pdb
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Waiting_Loading.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Account_Login.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Home.resources
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\FontAwesome.Sharp.dll
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.CopyComplete
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Item_Service.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_Services.resources

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Grab
+namespace Grab.Screens
 {
-    public partial class Form1 : Form
+    public partial class Form_Account_Login : Form
     {
-        public Form1()
+        public Form_Account_Login()
         {
             InitializeComponent();
         }
