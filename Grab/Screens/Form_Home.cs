@@ -21,6 +21,8 @@ namespace Grab.Screens
         public Form_Home()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.None;
+
             BackColor = Assets.Variables.Colors.White;
 
             // Set color
@@ -47,7 +49,7 @@ namespace Grab.Screens
 
         private void Form_Home_Load(object sender, EventArgs e)
         {
-            ActivateAllServices("select * from GRAB_SERVICES");
+            ActivateAllServices();
         }
 
         private void ActivateButton(object senderBtn)
@@ -112,29 +114,129 @@ namespace Grab.Screens
             ActivateButton(sender);
         }
 
-        private void ActivateAllServices(string query)
+        private void ActivateAllServices()
         {
             foreach (Control item in Panel_Body.Controls.OfType<FlowLayoutPanel>().ToList())
                 Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Remove(item);
             foreach (Control item in Panel_Body.Controls.OfType<Form>().ToList())
                 Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Remove(item);
-            FlowLayoutPanel flpShowProduct = new FlowLayoutPanel();
-            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(flpShowProduct);
-            flpShowProduct.Dock = DockStyle.Fill;
-            flpShowProduct.AutoScroll = true;
+            FlowLayoutPanel flpShowContent = new FlowLayoutPanel();
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(flpShowContent);
+            flpShowContent.Dock = DockStyle.Fill;
+            flpShowContent.AutoScroll = true;
 
             DataProvider provider = new DataProvider();
-            DataTable dtShowProduct = provider.ExecuteQuery(query);
+            
+            // Get service
+            DataTable dtShowServiceCategory = provider.ExecuteQuery("select * from GRAB_CATEGORY");
+            DataTable dtShowTransportService = provider.ExecuteQuery("select * from GRAB_TRANSPORT");
+            DataTable dtShowDeliveryService = provider.ExecuteQuery("select * from GRAB_DELIVERY");
 
-            foreach (DataRow row in dtShowProduct.Rows)
+            flpShowContent.Controls.Add(new Control_Service(dtShowServiceCategory.Rows[0]));
+            foreach (DataRow row in dtShowTransportService.Rows)
             {
-                Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_services.GetObject(row["GRAB_SERVICE_ID"].ToString());
+                Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(row["GRAB_ID"].ToString());
                 Control_Item_Service item = new Control_Item_Service(
                     myImage,
                     row
                 );
-                flpShowProduct.Controls.Add(item);
+                flpShowContent.Controls.Add(item);
             }
+
+            flpShowContent.Controls.Add(new Control_Service(dtShowServiceCategory.Rows[1]));
+            foreach (DataRow row in dtShowDeliveryService.Rows)
+            {
+                Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_delivery.GetObject(row["GRAB_ID"].ToString());
+                Control_Item_Service item = new Control_Item_Service(
+                    myImage,
+                    row
+                );
+                flpShowContent.Controls.Add(item);
+            }
+        }
+
+        private void TextBox_LocationSearch_Enter(object sender, EventArgs e)
+        {
+            if (TextBox_LocationSearch.Text == "Tìm kiếm vị trí ..." && TextBox_LocationSearch.ForeColor == Color.Gray)
+            {
+                TextBox_LocationSearch.Text = "";
+                TextBox_LocationSearch.ForeColor = Color.Black;
+            }
+        }
+
+        private void TextBox_LocationSearch_Leave(object sender, EventArgs e)
+        {
+            if (TextBox_LocationSearch.Text == "")
+            {
+                TextBox_LocationSearch.Text = "Tìm kiếm vị trí ...";
+                TextBox_LocationSearch.ForeColor = Color.Gray;
+            }
+        }
+
+        private void Button_Search_MouseEnter(object sender, EventArgs e)
+        {
+            Button_Search.BackColor = Assets.Variables.Colors.DarkGreen_x11;
+            Button_Search.IconColor = Assets.Variables.Colors.White;
+        }
+
+        private void Button_Search_MouseLeave(object sender, EventArgs e)
+        {
+            Button_Search.BackColor = Assets.Variables.Colors.White;
+            Button_Search.IconColor = Color.Black;
+        }
+
+        private void Button_Minimize_MouseEnter(object sender, EventArgs e)
+        {
+            Button_Minimize.BackColor = Color.White;
+            Button_Minimize.IconColor = Color.Green;
+        }
+
+        private void Button_Minimize_MouseLeave(object sender, EventArgs e)
+        {
+            Button_Minimize.BackColor = Color.Transparent;
+            Button_Minimize.IconColor = Color.White;
+        }
+
+        private void Button_Maximum_MouseEnter(object sender, EventArgs e)
+        {
+            Button_Maximum.BackColor = Color.White;
+            Button_Maximum.IconColor = Color.Green;
+        }
+
+        private void Button_Maximum_MouseLeave(object sender, EventArgs e)
+        {
+            Button_Maximum.BackColor = Color.Transparent;
+            Button_Maximum.IconColor = Color.White;
+        }
+
+        private void Button_Close_MouseEnter(object sender, EventArgs e)
+        {
+            Button_Close.BackColor = Color.Maroon;
+            Button_Close.IconColor = Color.White;
+        }
+
+        private void Button_Close_MouseLeave(object sender, EventArgs e)
+        {
+            Button_Close.BackColor = Color.Transparent;
+            Button_Close.IconColor = Color.White;
+        }
+
+        private void Button_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Button_Minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Button_Maximum_Click(object sender, EventArgs e)
+        {
+            //if (this.WindowState == FormWindowState.Normal)
+            //    this.WindowState = FormWindowState.Maximized;
+            //else
+            //    this.WindowState = FormWindowState.Normal;
         }
     }
 }

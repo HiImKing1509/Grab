@@ -15,6 +15,8 @@ namespace Grab.Screens
         public Form_Waiting_Loading()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.None;
+            WaitLoadingForm();
         }
 
         public async void WaitLoadingForm()

@@ -14,4 +14,14 @@ D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Home.resources
 D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\FontAwesome.Sharp.dll
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.csproj.CopyComplete
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Item_Service.resources
-D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_Services.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Service.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabTransport.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabDelivery.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabLogo.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabBrand.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Account_Register.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Notification_Form.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabIcon.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Booking.resources
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Newtonsoft.Json.xml

@@ -38,9 +38,12 @@
             this.Panel_Image = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Header = new System.Windows.Forms.Panel();
+            this.Button_Minimize = new FontAwesome.Sharp.IconButton();
+            this.Button_Maximum = new FontAwesome.Sharp.IconButton();
+            this.Button_Close = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Button_MovieSearch = new FontAwesome.Sharp.IconButton();
-            this.TextBox_MovieSearch = new System.Windows.Forms.TextBox();
+            this.Button_Search = new FontAwesome.Sharp.IconButton();
+            this.TextBox_LocationSearch = new System.Windows.Forms.TextBox();
             this.Panel_Body = new System.Windows.Forms.Panel();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Image.SuspendLayout();
@@ -221,6 +224,9 @@
             // 
             // Panel_Header
             // 
+            this.Panel_Header.Controls.Add(this.Button_Minimize);
+            this.Panel_Header.Controls.Add(this.Button_Maximum);
+            this.Panel_Header.Controls.Add(this.Button_Close);
             this.Panel_Header.Controls.Add(this.panel5);
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Header.Location = new System.Drawing.Point(312, 0);
@@ -228,44 +234,108 @@
             this.Panel_Header.Size = new System.Drawing.Size(1589, 192);
             this.Panel_Header.TabIndex = 1;
             // 
+            // Button_Minimize
+            // 
+            this.Button_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Minimize.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Minimize.FlatAppearance.BorderSize = 0;
+            this.Button_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Minimize.IconChar = FontAwesome.Sharp.IconChar.SquareMinus;
+            this.Button_Minimize.IconColor = System.Drawing.Color.White;
+            this.Button_Minimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Minimize.IconSize = 24;
+            this.Button_Minimize.Location = new System.Drawing.Point(1452, 0);
+            this.Button_Minimize.Name = "Button_Minimize";
+            this.Button_Minimize.Size = new System.Drawing.Size(45, 45);
+            this.Button_Minimize.TabIndex = 4;
+            this.Button_Minimize.UseVisualStyleBackColor = false;
+            this.Button_Minimize.Click += new System.EventHandler(this.Button_Minimize_Click);
+            this.Button_Minimize.MouseEnter += new System.EventHandler(this.Button_Minimize_MouseEnter);
+            this.Button_Minimize.MouseLeave += new System.EventHandler(this.Button_Minimize_MouseLeave);
+            // 
+            // Button_Maximum
+            // 
+            this.Button_Maximum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Maximum.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Maximum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Maximum.FlatAppearance.BorderSize = 0;
+            this.Button_Maximum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Maximum.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.Button_Maximum.IconColor = System.Drawing.Color.White;
+            this.Button_Maximum.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Maximum.IconSize = 24;
+            this.Button_Maximum.Location = new System.Drawing.Point(1498, 0);
+            this.Button_Maximum.Name = "Button_Maximum";
+            this.Button_Maximum.Size = new System.Drawing.Size(45, 45);
+            this.Button_Maximum.TabIndex = 3;
+            this.Button_Maximum.UseVisualStyleBackColor = false;
+            this.Button_Maximum.Click += new System.EventHandler(this.Button_Maximum_Click);
+            this.Button_Maximum.MouseEnter += new System.EventHandler(this.Button_Maximum_MouseEnter);
+            this.Button_Maximum.MouseLeave += new System.EventHandler(this.Button_Maximum_MouseLeave);
+            // 
+            // Button_Close
+            // 
+            this.Button_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_Close.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Close.FlatAppearance.BorderSize = 0;
+            this.Button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Close.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Button_Close.IconColor = System.Drawing.Color.White;
+            this.Button_Close.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Close.IconSize = 24;
+            this.Button_Close.Location = new System.Drawing.Point(1544, 0);
+            this.Button_Close.Name = "Button_Close";
+            this.Button_Close.Size = new System.Drawing.Size(45, 45);
+            this.Button_Close.TabIndex = 2;
+            this.Button_Close.UseVisualStyleBackColor = false;
+            this.Button_Close.Click += new System.EventHandler(this.Button_Close_Click);
+            this.Button_Close.MouseEnter += new System.EventHandler(this.Button_Close_MouseEnter);
+            this.Button_Close.MouseLeave += new System.EventHandler(this.Button_Close_MouseLeave);
+            // 
             // panel5
             // 
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.Button_MovieSearch);
-            this.panel5.Controls.Add(this.TextBox_MovieSearch);
+            this.panel5.Controls.Add(this.Button_Search);
+            this.panel5.Controls.Add(this.TextBox_LocationSearch);
             this.panel5.Location = new System.Drawing.Point(62, 35);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(958, 54);
             this.panel5.TabIndex = 1;
             // 
-            // Button_MovieSearch
+            // Button_Search
             // 
-            this.Button_MovieSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_MovieSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Button_MovieSearch.FlatAppearance.BorderSize = 0;
-            this.Button_MovieSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_MovieSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.Button_MovieSearch.IconColor = System.Drawing.Color.Black;
-            this.Button_MovieSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_MovieSearch.IconSize = 28;
-            this.Button_MovieSearch.Location = new System.Drawing.Point(890, 0);
-            this.Button_MovieSearch.Name = "Button_MovieSearch";
-            this.Button_MovieSearch.Size = new System.Drawing.Size(68, 54);
-            this.Button_MovieSearch.TabIndex = 0;
-            this.Button_MovieSearch.UseVisualStyleBackColor = true;
+            this.Button_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Search.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Button_Search.FlatAppearance.BorderSize = 0;
+            this.Button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Search.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.Button_Search.IconColor = System.Drawing.Color.Black;
+            this.Button_Search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Search.IconSize = 28;
+            this.Button_Search.Location = new System.Drawing.Point(890, 0);
+            this.Button_Search.Name = "Button_Search";
+            this.Button_Search.Size = new System.Drawing.Size(68, 54);
+            this.Button_Search.TabIndex = 0;
+            this.Button_Search.UseVisualStyleBackColor = true;
+            this.Button_Search.MouseEnter += new System.EventHandler(this.Button_Search_MouseEnter);
+            this.Button_Search.MouseLeave += new System.EventHandler(this.Button_Search_MouseLeave);
             // 
-            // TextBox_MovieSearch
+            // TextBox_LocationSearch
             // 
-            this.TextBox_MovieSearch.BackColor = System.Drawing.Color.White;
-            this.TextBox_MovieSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox_MovieSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            this.TextBox_MovieSearch.ForeColor = System.Drawing.Color.Gray;
-            this.TextBox_MovieSearch.Location = new System.Drawing.Point(14, 16);
-            this.TextBox_MovieSearch.Name = "TextBox_MovieSearch";
-            this.TextBox_MovieSearch.Size = new System.Drawing.Size(850, 25);
-            this.TextBox_MovieSearch.TabIndex = 0;
-            this.TextBox_MovieSearch.Text = "Location ...";
+            this.TextBox_LocationSearch.BackColor = System.Drawing.Color.White;
+            this.TextBox_LocationSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_LocationSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.TextBox_LocationSearch.ForeColor = System.Drawing.Color.Gray;
+            this.TextBox_LocationSearch.Location = new System.Drawing.Point(14, 16);
+            this.TextBox_LocationSearch.Name = "TextBox_LocationSearch";
+            this.TextBox_LocationSearch.Size = new System.Drawing.Size(850, 25);
+            this.TextBox_LocationSearch.TabIndex = 0;
+            this.TextBox_LocationSearch.Text = "Tìm kiếm vị trí ...";
+            this.TextBox_LocationSearch.Enter += new System.EventHandler(this.TextBox_LocationSearch_Enter);
+            this.TextBox_LocationSearch.Leave += new System.EventHandler(this.TextBox_LocationSearch_Leave);
             // 
             // Panel_Body
             // 
@@ -310,8 +380,11 @@
         private FontAwesome.Sharp.IconButton Button_Home;
         private System.Windows.Forms.Panel Panel_Header;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton Button_MovieSearch;
-        private System.Windows.Forms.TextBox TextBox_MovieSearch;
+        private FontAwesome.Sharp.IconButton Button_Search;
+        private System.Windows.Forms.TextBox TextBox_LocationSearch;
         private System.Windows.Forms.Panel Panel_Body;
+        private FontAwesome.Sharp.IconButton Button_Minimize;
+        private FontAwesome.Sharp.IconButton Button_Maximum;
+        private FontAwesome.Sharp.IconButton Button_Close;
     }
 }

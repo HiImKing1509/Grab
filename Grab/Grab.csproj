@@ -36,6 +36,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.2.1\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -56,14 +59,38 @@
     <Compile Include="Assets\Variables\Colors.cs" />
     <Compile Include="Assets\Variables\ListFormPanel.cs" />
     <Compile Include="Assets\Variables\ResourcesManager.cs" />
+    <Compile Include="Assets\Variables\StringProcessing.cs" />
     <Compile Include="CustomControls\CirclePictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControls\PanelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Database\DAO\DataProvider.cs" />
-    <Compile Include="Images_Services.Designer.cs">
+    <Compile Include="Images_GrabBrand.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Images_Services.resx</DependentUpon>
+      <DependentUpon>Images_GrabBrand.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images_GrabDelivery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images_GrabDelivery.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images_GrabIcon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images_GrabIcon.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images_GrabLogo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images_GrabLogo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images_GrabTransport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images_GrabTransport.resx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +106,12 @@
     <Compile Include="Screens\Form_Account_Register.Designer.cs">
       <DependentUpon>Form_Account_Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Form_Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Form_Booking.Designer.cs">
+      <DependentUpon>Form_Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +124,43 @@
     <Compile Include="Screens\Form_Waiting_Loading.Designer.cs">
       <DependentUpon>Form_Waiting_Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Notification_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Notification_Form.Designer.cs">
+      <DependentUpon>Notification_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Control_Item_Service.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Control_Item_Service.Designer.cs">
       <DependentUpon>Control_Item_Service.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Images_Services.resx">
+    <Compile Include="UserControls\Control_Service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Service.Designer.cs">
+      <DependentUpon>Control_Service.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Images_GrabBrand.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Images_Services.Designer.cs</LastGenOutput>
+      <LastGenOutput>Images_GrabBrand.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images_GrabDelivery.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_GrabDelivery.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images_GrabIcon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_GrabIcon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images_GrabLogo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_GrabLogo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images_GrabTransport.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images_GrabTransport.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,14 +175,26 @@
     <EmbeddedResource Include="Screens\Form_Account_Login.resx">
       <DependentUpon>Form_Account_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Account_Register.resx">
+      <DependentUpon>Form_Account_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Booking.resx">
+      <DependentUpon>Form_Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_Waiting_Loading.resx">
       <DependentUpon>Form_Waiting_Loading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Notification_Form.resx">
+      <DependentUpon>Notification_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Control_Item_Service.resx">
       <DependentUpon>Control_Item_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Service.resx">
+      <DependentUpon>Control_Service.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -137,12 +210,95 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\SV01.png" />
+    <None Include="Resources\GT02.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SV02.png" />
+    <None Include="Resources\GT03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GT04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GT05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GT01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GD02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GD03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GD01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG3_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG1_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LG2_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BR01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

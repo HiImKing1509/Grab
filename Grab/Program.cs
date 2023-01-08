@@ -16,7 +16,7 @@ namespace Grab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screens.Form_Home());
+            Application.Run(new Screens.Form_Waiting_Loading());
         }
     }
 }
