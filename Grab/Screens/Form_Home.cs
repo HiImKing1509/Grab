@@ -86,7 +86,9 @@ namespace Grab.Screens
         }
         private void Button_Home_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Assets.Variables.UtilsFunction.distanceLocation(10.8167, 106.6333, 10.8167, 106.6333).ToString());
             ActivateButton(sender);
+            ResetHomePage((Button)sender);
         }
 
         private void Button_Activity_Click(object sender, EventArgs e)
@@ -157,7 +159,7 @@ namespace Grab.Screens
 
         private void TextBox_LocationSearch_Enter(object sender, EventArgs e)
         {
-            if (TextBox_LocationSearch.Text == "Tìm kiếm vị trí ..." && TextBox_LocationSearch.ForeColor == Color.Gray)
+            if (TextBox_LocationSearch.Text == "Tìm kiếm dịch vụ ..." && TextBox_LocationSearch.ForeColor == Color.Gray)
             {
                 TextBox_LocationSearch.Text = "";
                 TextBox_LocationSearch.ForeColor = Color.Black;
@@ -168,7 +170,7 @@ namespace Grab.Screens
         {
             if (TextBox_LocationSearch.Text == "")
             {
-                TextBox_LocationSearch.Text = "Tìm kiếm vị trí ...";
+                TextBox_LocationSearch.Text = "Tìm kiếm dịch vụ ...";
                 TextBox_LocationSearch.ForeColor = Color.Gray;
             }
         }
@@ -237,6 +239,16 @@ namespace Grab.Screens
             //    this.WindowState = FormWindowState.Maximized;
             //else
             //    this.WindowState = FormWindowState.Normal;
+        }
+
+        private void ResetHomePage(Button btn = null)
+        {
+            TextBox_LocationSearch.Text = "Tìm kiếm dịch vụ ...";
+            TextBox_LocationSearch.ForeColor = Color.Gray;
+            if (btn != null)
+                ActivateButton(btn);
+            //CloseForm();
+            ActivateAllServices();
         }
     }
 }

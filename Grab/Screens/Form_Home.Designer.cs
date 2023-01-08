@@ -104,7 +104,7 @@
             this.Button_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_Account.IconSize = 28;
             this.Button_Account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Account.Location = new System.Drawing.Point(0, 440);
+            this.Button_Account.Location = new System.Drawing.Point(0, 388);
             this.Button_Account.Name = "Button_Account";
             this.Button_Account.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Button_Account.Size = new System.Drawing.Size(312, 62);
@@ -127,7 +127,7 @@
             this.Button_Messages.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_Messages.IconSize = 28;
             this.Button_Messages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Messages.Location = new System.Drawing.Point(0, 378);
+            this.Button_Messages.Location = new System.Drawing.Point(0, 326);
             this.Button_Messages.Name = "Button_Messages";
             this.Button_Messages.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Button_Messages.Size = new System.Drawing.Size(312, 62);
@@ -150,7 +150,7 @@
             this.Button_Payment.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_Payment.IconSize = 28;
             this.Button_Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Payment.Location = new System.Drawing.Point(0, 316);
+            this.Button_Payment.Location = new System.Drawing.Point(0, 264);
             this.Button_Payment.Name = "Button_Payment";
             this.Button_Payment.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Button_Payment.Size = new System.Drawing.Size(312, 62);
@@ -173,7 +173,7 @@
             this.Button_Activity.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_Activity.IconSize = 28;
             this.Button_Activity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Activity.Location = new System.Drawing.Point(0, 254);
+            this.Button_Activity.Location = new System.Drawing.Point(0, 202);
             this.Button_Activity.Name = "Button_Activity";
             this.Button_Activity.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Button_Activity.Size = new System.Drawing.Size(312, 62);
@@ -196,7 +196,7 @@
             this.Button_Home.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Button_Home.IconSize = 28;
             this.Button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Home.Location = new System.Drawing.Point(0, 192);
+            this.Button_Home.Location = new System.Drawing.Point(0, 140);
             this.Button_Home.Name = "Button_Home";
             this.Button_Home.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.Button_Home.Size = new System.Drawing.Size(312, 62);
@@ -211,14 +211,16 @@
             this.Panel_Image.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Image.Location = new System.Drawing.Point(0, 0);
             this.Panel_Image.Name = "Panel_Image";
-            this.Panel_Image.Size = new System.Drawing.Size(312, 192);
+            this.Panel_Image.Size = new System.Drawing.Size(312, 140);
             this.Panel_Image.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(46, 35);
+            this.pictureBox1.Image = global::Grab.Images_GrabLogo.LG2_06;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(191, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -231,7 +233,7 @@
             this.Panel_Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Header.Location = new System.Drawing.Point(312, 0);
             this.Panel_Header.Name = "Panel_Header";
-            this.Panel_Header.Size = new System.Drawing.Size(1589, 192);
+            this.Panel_Header.Size = new System.Drawing.Size(1589, 140);
             this.Panel_Header.TabIndex = 1;
             // 
             // Button_Minimize
@@ -333,16 +335,16 @@
             this.TextBox_LocationSearch.Name = "TextBox_LocationSearch";
             this.TextBox_LocationSearch.Size = new System.Drawing.Size(850, 25);
             this.TextBox_LocationSearch.TabIndex = 0;
-            this.TextBox_LocationSearch.Text = "Tìm kiếm vị trí ...";
+            this.TextBox_LocationSearch.Text = "Tìm kiếm dịch vụ ...";
             this.TextBox_LocationSearch.Enter += new System.EventHandler(this.TextBox_LocationSearch_Enter);
             this.TextBox_LocationSearch.Leave += new System.EventHandler(this.TextBox_LocationSearch_Leave);
             // 
             // Panel_Body
             // 
             this.Panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Body.Location = new System.Drawing.Point(312, 192);
+            this.Panel_Body.Location = new System.Drawing.Point(312, 140);
             this.Panel_Body.Name = "Panel_Body";
-            this.Panel_Body.Size = new System.Drawing.Size(1589, 841);
+            this.Panel_Body.Size = new System.Drawing.Size(1589, 893);
             this.Panel_Body.TabIndex = 2;
             // 
             // Form_Home

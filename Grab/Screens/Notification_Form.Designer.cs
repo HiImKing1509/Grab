@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Notification_Form));
             this.Label_Notifications = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Button_Close = new FontAwesome.Sharp.IconButton();
             this.PictureBox_Icon = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Icon)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Notifications
             // 
             this.Label_Notifications.AutoSize = true;
-            this.Label_Notifications.BackColor = System.Drawing.SystemColors.Control;
+            this.Label_Notifications.BackColor = System.Drawing.Color.Transparent;
             this.Label_Notifications.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Notifications.ForeColor = System.Drawing.Color.White;
             this.Label_Notifications.Location = new System.Drawing.Point(153, 40);
@@ -77,8 +77,7 @@
             // 
             // Notification_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(537, 106);
             this.Controls.Add(this.Button_Close);
             this.Controls.Add(this.Label_Notifications);

@@ -25,3 +25,5 @@ D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Images_GrabIcon.resources
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Booking.resources
 D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Newtonsoft.Json.dll
 D:\Workspace-Learning-C#\Grab\Grab\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Item_Recommendation.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_GrabTransportService.resources

@@ -47,7 +47,7 @@ namespace Grab.Screens
                         Left--;
                     else
                         if (Opacity == 1.0)
-                        action = enmAction.wait;
+                            action = enmAction.wait;
                     break;
                 case enmAction.close:
                     timer1.Interval = 1;
@@ -62,7 +62,8 @@ namespace Grab.Screens
 
         private void Button_Close_Click(object sender, EventArgs e)
         {
-
+            timer1.Interval = 1;
+            action = enmAction.close;
         }
 
         public void showAlert(string msg, enmType type)

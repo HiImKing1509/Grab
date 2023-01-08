@@ -43,6 +43,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,6 +61,7 @@
     <Compile Include="Assets\Variables\ListFormPanel.cs" />
     <Compile Include="Assets\Variables\ResourcesManager.cs" />
     <Compile Include="Assets\Variables\StringProcessing.cs" />
+    <Compile Include="Assets\Variables\UtilsFunction.cs" />
     <Compile Include="CustomControls\CirclePictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -130,6 +132,18 @@
     <Compile Include="Screens\Notification_Form.Designer.cs">
       <DependentUpon>Notification_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Control_GrabTransportService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_GrabTransportService.Designer.cs">
+      <DependentUpon>Control_GrabTransportService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Control_Item_Recommendation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Item_Recommendation.Designer.cs">
+      <DependentUpon>Control_Item_Recommendation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Control_Item_Service.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +203,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Notification_Form.resx">
       <DependentUpon>Notification_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_GrabTransportService.resx">
+      <DependentUpon>Control_GrabTransportService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Item_Recommendation.resx">
+      <DependentUpon>Control_Item_Recommendation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Control_Item_Service.resx">
       <DependentUpon>Control_Item_Service.cs</DependentUpon>
@@ -299,6 +319,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoLocation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrabBike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrabCar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrabTaxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JustGrab.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

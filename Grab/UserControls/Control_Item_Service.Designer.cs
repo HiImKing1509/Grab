@@ -46,6 +46,7 @@
             this.Panel_Infor.Name = "Panel_Infor";
             this.Panel_Infor.Size = new System.Drawing.Size(366, 256);
             this.Panel_Infor.TabIndex = 4;
+            this.Panel_Infor.Click += new System.EventHandler(this.PictureBox_Image_Click);
             this.Panel_Infor.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
             this.Panel_Infor.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
@@ -60,6 +61,7 @@
             this.Label_Description.Size = new System.Drawing.Size(299, 50);
             this.Label_Description.TabIndex = 4;
             this.Label_Description.Text = "Thuê xe cùng tài xế để phục vụ nhu cầu đi lại riêng của bạn";
+            this.Label_Description.Click += new System.EventHandler(this.PictureBox_Image_Click);
             this.Label_Description.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
             this.Label_Description.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
@@ -74,6 +76,7 @@
             this.Label_Name.TabIndex = 3;
             this.Label_Name.Text = "label1";
             this.Label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Label_Name.Click += new System.EventHandler(this.PictureBox_Image_Click);
             this.Label_Name.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
             this.Label_Name.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
@@ -99,6 +102,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Control_Item_Service";
             this.Size = new System.Drawing.Size(783, 256);
+            this.Click += new System.EventHandler(this.PictureBox_Image_Click);
             this.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             this.Panel_Infor.ResumeLayout(false);

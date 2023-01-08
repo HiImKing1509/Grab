@@ -51,7 +51,7 @@ namespace Grab.UserControls
 
         private void PictureBox_Image_Click(object sender, EventArgs e)
         {
-            openChildForm(new Screens.Form_Booking());
+            ClickEvent();
         }
 
         private void openChildForm(Form childForm)
@@ -67,6 +67,11 @@ namespace Grab.UserControls
             Assets.Variables.ListFormPanel.ListFormsPanel[0].Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void ClickEvent()
+        {
+            openChildForm(new Screens.Form_Booking(Label_Name.Text));
         }
     }
 }

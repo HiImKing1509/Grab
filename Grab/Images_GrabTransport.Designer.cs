@@ -63,6 +63,36 @@ namespace Grab {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GrabBike {
+            get {
+                object obj = ResourceManager.GetObject("GrabBike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GrabCar {
+            get {
+                object obj = ResourceManager.GetObject("GrabCar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GrabTaxi {
+            get {
+                object obj = ResourceManager.GetObject("GrabTaxi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GT01 {
             get {
                 object obj = ResourceManager.GetObject("GT01", resourceCulture);
@@ -106,6 +136,26 @@ namespace Grab {
         internal static System.Drawing.Bitmap GT05 {
             get {
                 object obj = ResourceManager.GetObject("GT05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JustGrab {
+            get {
+                object obj = ResourceManager.GetObject("JustGrab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rent {
+            get {
+                object obj = ResourceManager.GetObject("Rent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
