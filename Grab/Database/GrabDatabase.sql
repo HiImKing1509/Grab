@@ -135,6 +135,18 @@ create table GRAB_CAR (
 	GRAB_CAR_DRIVER_AGE integer NOT NULL,
 )
 
+create table GRAB_BIKE (
+	GRAB_BIKE_ID char(4) NOT NULL,
+	GRAB_BIKE_ID_PROVINCE nvarchar(20) NOT NULL,
+	GRAB_BIKE_NAME nvarchar(255) NOT NULL,
+	GRAB_BIKE_START integer NOT NULL,
+	GRAB_BIKE_END integer NOT NULL,
+	GRAB_BIKE_COST integer NOT NULL,
+	GRAB_BIKE_NUMBER nvarchar(10) NOT NULL,
+	GRAB_BIKE_DRIVER_NAME nvarchar(255) NOT NULL,
+	GRAB_BIKE_DRIVER_AGE integer NOT NULL,
+)
+
 
 -- Drop Table
 drop table GRAB_CAR

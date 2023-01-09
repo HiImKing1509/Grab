@@ -86,7 +86,6 @@ namespace Grab.Screens
         }
         private void Button_Home_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Assets.Variables.UtilsFunction.distanceLocation(10.8167, 106.6333, 10.8167, 106.6333).ToString());
             ActivateButton(sender);
             ResetHomePage((Button)sender);
         }

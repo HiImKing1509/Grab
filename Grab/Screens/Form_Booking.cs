@@ -112,21 +112,43 @@ namespace Grab.Screens
                 // Transport Services
                 FlowLayoutPanel_TransportServices.Controls.Clear();
 
-                
-                if (Label_ServiceName.Text == "GrabCar")
-                    query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
-                else
-                    query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                int num_vehicles = 5;
+                switch (Assets.Variables.UtilsFunction.Start_id_province)
+                {
+                    case 1: case 79:
+                        if (Label_ServiceName.Text == "GrabCar")
+                            num_vehicles = 8;
+                        else if (Label_ServiceName.Text == "GrabBike")
+                            num_vehicles = 5;
+                        break;
+                    default:
+                        if (Label_ServiceName.Text == "GrabCar")
+                            num_vehicles = 5;
+                        else if (Label_ServiceName.Text == "GrabBike")
+                            num_vehicles = 4;
+                        break;
+                }
+
+                switch (Label_ServiceName.Text)
+                {
+                    case "GrabCar":
+                        query = $"select top {num_vehicles} * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        break;
+                    case "GrabBike":
+                        query = $"select top {num_vehicles} * from GRAB_BIKE where GRAB_BIKE_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        break;
+                    default:
+                        query = $"select top {num_vehicles} * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        break;
+                }
 
                 DataTable dt = provider.ExecuteQuery(query);
 
-                int numcar = 5;
-                if (Assets.Variables.UtilsFunction.Start_id_province == 1 || Assets.Variables.UtilsFunction.Start_id_province == 79)
-                    numcar = 8;
-                foreach (DataRow row in dt.Rows.Cast<DataRow>().Take(numcar))
+                foreach (DataRow row in dt.Rows)
                 {
                     Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(Label_ServiceName.Text);
                     Control_GrabTransportService item = new Control_GrabTransportService(
+                        Label_ServiceName.Text,
                         myImage,
                         row
                     );

@@ -117,6 +117,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Control_GrabTransportService";
             this.Size = new System.Drawing.Size(541, 108);
+            this.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
             this.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Image)).EndInit();
