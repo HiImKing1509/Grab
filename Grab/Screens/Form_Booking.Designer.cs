@@ -32,7 +32,28 @@
             this.Panel_Recommendation2 = new System.Windows.Forms.FlowLayoutPanel();
             this.Panel_Recommendation1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelGradient2 = new Grab.CustomControls.PanelGradient();
-            this.FlowLayoutPanel_TransportServices = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel_JustGrab = new System.Windows.Forms.Panel();
+            this.Label_WaitingTime = new System.Windows.Forms.Label();
+            this.Label_Cost_JustGrab = new System.Windows.Forms.Label();
+            this.Button_Booking_JustGrab = new FontAwesome.Sharp.IconButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Label_DriverAge_JustGrab = new System.Windows.Forms.Label();
+            this.Label_DriverName_JustGrab = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Button_7_JustGrab = new FontAwesome.Sharp.IconButton();
+            this.Button_4_JustGrab = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Label_Seats_JustGrab = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.Label_ServiceCategory_JustGrab = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label_Distance = new System.Windows.Forms.Label();
             this.Label_LocationDestination = new System.Windows.Forms.Label();
@@ -42,6 +63,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.FlowLayoutPanel_TransportServices = new System.Windows.Forms.FlowLayoutPanel();
             this.Panel_SearchLocation = new Grab.CustomControls.PanelGradient();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,6 +73,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.TextBox_LocationStartSearch = new System.Windows.Forms.TextBox();
             this.panelGradient2.SuspendLayout();
+            this.Panel_JustGrab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.Panel_SearchLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +116,7 @@
             this.panelGradient2.BackColor = System.Drawing.Color.Green;
             this.panelGradient2.BottomColor = System.Drawing.Color.Empty;
             this.panelGradient2.Controls.Add(this.FlowLayoutPanel_TransportServices);
+            this.panelGradient2.Controls.Add(this.Panel_JustGrab);
             this.panelGradient2.Controls.Add(this.panel1);
             this.panelGradient2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelGradient2.Location = new System.Drawing.Point(0, 193);
@@ -99,14 +125,286 @@
             this.panelGradient2.TabIndex = 1;
             this.panelGradient2.TopColor = System.Drawing.Color.White;
             // 
-            // FlowLayoutPanel_TransportServices
+            // Panel_JustGrab
             // 
-            this.FlowLayoutPanel_TransportServices.AutoScroll = true;
-            this.FlowLayoutPanel_TransportServices.Location = new System.Drawing.Point(42, 244);
-            this.FlowLayoutPanel_TransportServices.Name = "FlowLayoutPanel_TransportServices";
-            this.FlowLayoutPanel_TransportServices.Size = new System.Drawing.Size(568, 488);
-            this.FlowLayoutPanel_TransportServices.TabIndex = 8;
-            this.FlowLayoutPanel_TransportServices.Visible = false;
+            this.Panel_JustGrab.BackColor = System.Drawing.Color.White;
+            this.Panel_JustGrab.Controls.Add(this.Label_WaitingTime);
+            this.Panel_JustGrab.Controls.Add(this.Label_Cost_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.Button_Booking_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.pictureBox3);
+            this.Panel_JustGrab.Controls.Add(this.Label_DriverAge_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.Label_DriverName_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.panel9);
+            this.Panel_JustGrab.Controls.Add(this.label14);
+            this.Panel_JustGrab.Controls.Add(this.label15);
+            this.Panel_JustGrab.Controls.Add(this.label16);
+            this.Panel_JustGrab.Controls.Add(this.label5);
+            this.Panel_JustGrab.Controls.Add(this.Button_7_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.Button_4_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.pictureBox2);
+            this.Panel_JustGrab.Controls.Add(this.label7);
+            this.Panel_JustGrab.Controls.Add(this.Label_Seats_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.label10);
+            this.Panel_JustGrab.Controls.Add(this.panel7);
+            this.Panel_JustGrab.Controls.Add(this.Label_ServiceCategory_JustGrab);
+            this.Panel_JustGrab.Controls.Add(this.label12);
+            this.Panel_JustGrab.Controls.Add(this.label13);
+            this.Panel_JustGrab.Location = new System.Drawing.Point(42, 236);
+            this.Panel_JustGrab.Name = "Panel_JustGrab";
+            this.Panel_JustGrab.Size = new System.Drawing.Size(568, 474);
+            this.Panel_JustGrab.TabIndex = 49;
+            this.Panel_JustGrab.Visible = false;
+            // 
+            // Label_WaitingTime
+            // 
+            this.Label_WaitingTime.AutoSize = true;
+            this.Label_WaitingTime.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_WaitingTime.Font = new System.Drawing.Font("Noto Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_WaitingTime.ForeColor = System.Drawing.Color.DimGray;
+            this.Label_WaitingTime.Location = new System.Drawing.Point(419, 86);
+            this.Label_WaitingTime.Name = "Label_WaitingTime";
+            this.Label_WaitingTime.Size = new System.Drawing.Size(103, 24);
+            this.Label_WaitingTime.TabIndex = 57;
+            this.Label_WaitingTime.Text = "7 - 15 mins";
+            // 
+            // Label_Cost_JustGrab
+            // 
+            this.Label_Cost_JustGrab.AutoSize = true;
+            this.Label_Cost_JustGrab.BackColor = System.Drawing.Color.Red;
+            this.Label_Cost_JustGrab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Cost_JustGrab.Font = new System.Drawing.Font("Noto Sans", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Cost_JustGrab.ForeColor = System.Drawing.Color.White;
+            this.Label_Cost_JustGrab.Location = new System.Drawing.Point(59, 392);
+            this.Label_Cost_JustGrab.Name = "Label_Cost_JustGrab";
+            this.Label_Cost_JustGrab.Size = new System.Drawing.Size(153, 51);
+            this.Label_Cost_JustGrab.TabIndex = 56;
+            this.Label_Cost_JustGrab.Text = "250.000";
+            // 
+            // Button_Booking_JustGrab
+            // 
+            this.Button_Booking_JustGrab.BackColor = System.Drawing.Color.Green;
+            this.Button_Booking_JustGrab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Booking_JustGrab.FlatAppearance.BorderSize = 0;
+            this.Button_Booking_JustGrab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Booking_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Booking_JustGrab.ForeColor = System.Drawing.Color.White;
+            this.Button_Booking_JustGrab.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_Booking_JustGrab.IconColor = System.Drawing.Color.Black;
+            this.Button_Booking_JustGrab.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Booking_JustGrab.Location = new System.Drawing.Point(246, 389);
+            this.Button_Booking_JustGrab.Name = "Button_Booking_JustGrab";
+            this.Button_Booking_JustGrab.Size = new System.Drawing.Size(273, 54);
+            this.Button_Booking_JustGrab.TabIndex = 45;
+            this.Button_Booking_JustGrab.Text = "Đặt xe ngay";
+            this.Button_Booking_JustGrab.UseVisualStyleBackColor = false;
+            this.Button_Booking_JustGrab.Click += new System.EventHandler(this.Button_Booking_JustGrab_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grab.Images_GrabUser.Driver;
+            this.pictureBox3.Location = new System.Drawing.Point(57, 236);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 55;
+            this.pictureBox3.TabStop = false;
+            // 
+            // Label_DriverAge_JustGrab
+            // 
+            this.Label_DriverAge_JustGrab.AutoSize = true;
+            this.Label_DriverAge_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.Label_DriverAge_JustGrab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_DriverAge_JustGrab.Location = new System.Drawing.Point(231, 326);
+            this.Label_DriverAge_JustGrab.MaximumSize = new System.Drawing.Size(450, 0);
+            this.Label_DriverAge_JustGrab.Name = "Label_DriverAge_JustGrab";
+            this.Label_DriverAge_JustGrab.Size = new System.Drawing.Size(34, 27);
+            this.Label_DriverAge_JustGrab.TabIndex = 54;
+            this.Label_DriverAge_JustGrab.Text = "20";
+            // 
+            // Label_DriverName_JustGrab
+            // 
+            this.Label_DriverName_JustGrab.AutoSize = true;
+            this.Label_DriverName_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.Label_DriverName_JustGrab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_DriverName_JustGrab.Location = new System.Drawing.Point(282, 279);
+            this.Label_DriverName_JustGrab.MaximumSize = new System.Drawing.Size(450, 0);
+            this.Label_DriverName_JustGrab.Name = "Label_DriverName_JustGrab";
+            this.Label_DriverName_JustGrab.Size = new System.Drawing.Size(227, 27);
+            this.Label_DriverName_JustGrab.TabIndex = 53;
+            this.Label_DriverName_JustGrab.Text = "Dương Khắc Khánh Hội";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Green;
+            this.panel9.Location = new System.Drawing.Point(169, 318);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(350, 3);
+            this.panel9.TabIndex = 52;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(164, 326);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 27);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Tuổi:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(164, 279);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 27);
+            this.label15.TabIndex = 50;
+            this.label15.Text = "Họ và tên:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label16.Font = new System.Drawing.Font("Noto Sans", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(163, 236);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(181, 32);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "Thông tin tài xế";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.Location = new System.Drawing.Point(50, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(386, 38);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "GrabCar 4 chỗ Bình Dương";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Button_7_JustGrab
+            // 
+            this.Button_7_JustGrab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Button_7_JustGrab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_7_JustGrab.FlatAppearance.BorderSize = 0;
+            this.Button_7_JustGrab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_7_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_7_JustGrab.ForeColor = System.Drawing.Color.White;
+            this.Button_7_JustGrab.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_7_JustGrab.IconColor = System.Drawing.Color.Black;
+            this.Button_7_JustGrab.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_7_JustGrab.Location = new System.Drawing.Point(191, 71);
+            this.Button_7_JustGrab.Name = "Button_7_JustGrab";
+            this.Button_7_JustGrab.Size = new System.Drawing.Size(128, 39);
+            this.Button_7_JustGrab.TabIndex = 47;
+            this.Button_7_JustGrab.Text = "7 chỗ";
+            this.Button_7_JustGrab.UseVisualStyleBackColor = false;
+            this.Button_7_JustGrab.Click += new System.EventHandler(this.Button_7_JustGrab_Click);
+            // 
+            // Button_4_JustGrab
+            // 
+            this.Button_4_JustGrab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_4_JustGrab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_4_JustGrab.FlatAppearance.BorderSize = 0;
+            this.Button_4_JustGrab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_4_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_4_JustGrab.ForeColor = System.Drawing.Color.White;
+            this.Button_4_JustGrab.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_4_JustGrab.IconColor = System.Drawing.Color.Black;
+            this.Button_4_JustGrab.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_4_JustGrab.Location = new System.Drawing.Point(57, 71);
+            this.Button_4_JustGrab.Name = "Button_4_JustGrab";
+            this.Button_4_JustGrab.Size = new System.Drawing.Size(128, 39);
+            this.Button_4_JustGrab.TabIndex = 46;
+            this.Button_4_JustGrab.Text = "4 chỗ";
+            this.Button_4_JustGrab.UseVisualStyleBackColor = false;
+            this.Button_4_JustGrab.Click += new System.EventHandler(this.Button_4_JustGrab_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grab.Images_GrabTransport.GrabCar;
+            this.pictureBox2.Location = new System.Drawing.Point(57, 129);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(386, 172);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 27);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Số ghế:";
+            // 
+            // Label_Seats_JustGrab
+            // 
+            this.Label_Seats_JustGrab.AutoSize = true;
+            this.Label_Seats_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.Label_Seats_JustGrab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_Seats_JustGrab.Location = new System.Drawing.Point(476, 173);
+            this.Label_Seats_JustGrab.MaximumSize = new System.Drawing.Size(450, 0);
+            this.Label_Seats_JustGrab.Name = "Label_Seats_JustGrab";
+            this.Label_Seats_JustGrab.Size = new System.Drawing.Size(34, 27);
+            this.Label_Seats_JustGrab.TabIndex = 40;
+            this.Label_Seats_JustGrab.Text = "20";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(99, 187);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 27);
+            this.label10.TabIndex = 39;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Green;
+            this.panel7.Location = new System.Drawing.Point(169, 211);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(350, 3);
+            this.panel7.TabIndex = 34;
+            // 
+            // Label_ServiceCategory_JustGrab
+            // 
+            this.Label_ServiceCategory_JustGrab.AutoSize = true;
+            this.Label_ServiceCategory_JustGrab.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.Label_ServiceCategory_JustGrab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_ServiceCategory_JustGrab.Location = new System.Drawing.Point(229, 172);
+            this.Label_ServiceCategory_JustGrab.MaximumSize = new System.Drawing.Size(450, 0);
+            this.Label_ServiceCategory_JustGrab.Name = "Label_ServiceCategory_JustGrab";
+            this.Label_ServiceCategory_JustGrab.Size = new System.Drawing.Size(121, 27);
+            this.Label_ServiceCategory_JustGrab.TabIndex = 38;
+            this.Label_ServiceCategory_JustGrab.Text = "Loại dịch vụ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(164, 172);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 27);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Loại:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label13.Font = new System.Drawing.Font("Noto Sans", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(163, 129);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(200, 32);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Thông tin dịch vụ";
             // 
             // panel1
             // 
@@ -204,6 +502,15 @@
             this.label1.Size = new System.Drawing.Size(114, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Điểm đón:";
+            // 
+            // FlowLayoutPanel_TransportServices
+            // 
+            this.FlowLayoutPanel_TransportServices.AutoScroll = true;
+            this.FlowLayoutPanel_TransportServices.Location = new System.Drawing.Point(42, 236);
+            this.FlowLayoutPanel_TransportServices.Name = "FlowLayoutPanel_TransportServices";
+            this.FlowLayoutPanel_TransportServices.Size = new System.Drawing.Size(568, 488);
+            this.FlowLayoutPanel_TransportServices.TabIndex = 10;
+            this.FlowLayoutPanel_TransportServices.Visible = false;
             // 
             // Panel_SearchLocation
             // 
@@ -329,6 +636,10 @@
             this.Name = "Form_Booking";
             this.Text = "Form_Booking";
             this.panelGradient2.ResumeLayout(false);
+            this.Panel_JustGrab.ResumeLayout(false);
+            this.Panel_JustGrab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Panel_SearchLocation.ResumeLayout(false);
@@ -353,7 +664,6 @@
         private System.Windows.Forms.Label Label_ServiceName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton Button_ServiceQuery;
-        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel_TransportServices;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -366,5 +676,28 @@
         private System.Windows.Forms.WebBrowser WebBrowser_GoogleMap;
         private System.Windows.Forms.FlowLayoutPanel Panel_Recommendation2;
         private System.Windows.Forms.FlowLayoutPanel Panel_Recommendation1;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel_TransportServices;
+        private System.Windows.Forms.Panel Panel_JustGrab;
+        private System.Windows.Forms.Label label5;
+        private FontAwesome.Sharp.IconButton Button_7_JustGrab;
+        private FontAwesome.Sharp.IconButton Button_4_JustGrab;
+        private FontAwesome.Sharp.IconButton Button_Booking_JustGrab;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Label_Seats_JustGrab;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label Label_ServiceCategory_JustGrab;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label Label_DriverAge_JustGrab;
+        private System.Windows.Forms.Label Label_DriverName_JustGrab;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label Label_Cost_JustGrab;
+        private System.Windows.Forms.Label Label_WaitingTime;
     }
 }

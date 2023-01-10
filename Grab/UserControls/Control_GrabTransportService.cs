@@ -15,14 +15,16 @@ namespace Grab.UserControls
         private Form activeForm = null;
         private string _service = null;
         private DataRow row = null;
+        double _distance = 0.0;
         public Control_GrabTransportService()
         {
             // InitializeComponent();
         }
 
-        public Control_GrabTransportService(string service, Bitmap image, DataRow dr)
+        public Control_GrabTransportService(double distance, string service, Bitmap image, DataRow dr)
         {
             InitializeComponent();
+            _distance = distance;
             row = dr;
             _service = service;
             PictureBox_Image.Image = image;
@@ -59,7 +61,7 @@ namespace Grab.UserControls
 
         private void Control_GrabTransportService_Click(object sender, EventArgs e)
         {
-            openChildForm(new Screens.Form_Confirm_Booking(_service, row));
+            openChildForm(new Screens.Form_Confirm_Booking(_distance, _service, row));
         }
 
         private void openChildForm(Form childForm)

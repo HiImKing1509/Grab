@@ -21,21 +21,26 @@ namespace Grab.Screens
     {
         private Form activeForm = null;
         DataProvider provider = new DataProvider();
+        DataRow row_global = null;
         string service_id = "";
+        double _distance = 0.0;
+
 
         public Form_Confirm_Booking()
         {
             // InitializeComponent();
         }
 
-        public Form_Confirm_Booking(string service, DataRow row) : this()
+        public Form_Confirm_Booking(double distance, string service, DataRow row) : this()
         {
             InitializeComponent();
+            row_global = row;
             Panel_Information.BackColor = Assets.Variables.Colors.MintGreen;
             LoadMap(Assets.Variables.UtilsFunction.Start_location, Assets.Variables.UtilsFunction.End_location);
             switch (service)
             {
-                case "GrabCar":
+                case "GrabCar": 
+                case "JustGrab":
                     service_id = row["GRAB_CAR_ID"].ToString();
                     Label_ServiceName.Text = row["GRAB_CAR_NAME"].ToString();
                     Label_WaitingTime.Text = row["GRAB_CAR_START"].ToString() + " - " + row["GRAB_CAR_END"].ToString() + " mins";
@@ -43,8 +48,8 @@ namespace Grab.Screens
                     Label_DriverAge.Text = row["GRAB_CAR_DRIVER_AGE"].ToString();
                     Label_ServiceCategory.Text = service;
 
-                    Seats.Visible = false;
-                    Label_Seats.Visible = false;
+                    Seats.Visible = true;
+                    Label_Seats.Visible = true;
 
                     Label_Seats.Text = row["GRAB_CAR_SEATS"].ToString();
                     Label_NumberService.Text = row["GRAB_CAR_NUMBER"].ToString();
@@ -92,11 +97,11 @@ namespace Grab.Screens
         private void Button_ServiceComfirm_Click(object sender, EventArgs e)
         {
             // Send mail
-            string query = $"INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, PROVINCE_ID, LOCATION_START, LOCATION_END, SERVICE_TIME, SERVICE_EVALUATE_SCORE) VALUES " +
-                $"('{service_id}', 'CU01', {Assets.Variables.UtilsFunction.Start_id_province}, N'{Assets.Variables.UtilsFunction.Start_location}', N'{Assets.Variables.UtilsFunction.End_location}', '{DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt")}', 0);";
+            string query = $"INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, PROVINCE_ID, LOCATION_START, LOCATION_END, DISTANCE, SERVICE_TIME, SERVICE_EVALUATE_SCORE) VALUES " +
+                $"('{service_id}', '{Assets.Variables.Account.DataTableAccount.Rows[0]["CUSTOMER_PHONE_NUMBER"]}', {Assets.Variables.UtilsFunction.Start_id_province}, N'{Assets.Variables.UtilsFunction.Start_location}', {_distance}, N'{Assets.Variables.UtilsFunction.End_location}', '{DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt")}', 0);";
+            int a = provider.ExecuteNonQuery(query);
 
-
-            openChildForm(new Form_Waiting_Booking());
+            openChildForm(new Form_Waiting_Booking(Label_ServiceCategory.Text, row_global));
         }
 
         private void openChildForm(Form childForm)

@@ -24,6 +24,8 @@ namespace Grab.Screens
     public partial class Form_Booking : Form
     {
         DataProvider provider = new DataProvider();
+        DataTable dt_just_grab = new DataTable();
+        private Form activeForm = null;
         string query = "";
         public static Form_Booking form_booking;
         public TextBox tbx1;
@@ -173,6 +175,10 @@ namespace Grab.Screens
                         query = $"select * from GRAB_BIKE where GRAB_BIKE_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
                             $"and GRAB_BIKE_COST < {max_cost} and GRAB_BIKE_COST > {min_cost}";
                         break;
+                    case "JustGrab":
+                        query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost} and GRAB_CAR_SEATS = 4 order by GRAB_CAR_COST asc";
+                        break;
                     default:
                         query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
                             $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost}";
@@ -180,18 +186,38 @@ namespace Grab.Screens
                 }
 
                 DataTable dt = provider.ExecuteQuery(query);
-
-                foreach (DataRow row in dt.Rows)
+                if (Label_ServiceName.Text == "GrabCar" || Label_ServiceName.Text == "GrabBike")
                 {
-                    Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(Label_ServiceName.Text);
-                    Control_GrabTransportService item = new Control_GrabTransportService(
-                        Label_ServiceName.Text,
-                        myImage,
-                        row
-                    );
-                    FlowLayoutPanel_TransportServices.Controls.Add(item);
+                    FlowLayoutPanel_TransportServices.Visible = true;
+                    Panel_JustGrab.Visible = false;
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(Label_ServiceName.Text);
+                        Control_GrabTransportService item = new Control_GrabTransportService(
+                            Convert.ToDouble(Label_Distance.Text.Remove(Label_Distance.Text.Length - 2).ToString()),
+                            Label_ServiceName.Text,
+                            myImage,
+                            row
+                        );
+                        FlowLayoutPanel_TransportServices.Controls.Add(item);
+                    }
+                    FlowLayoutPanel_TransportServices.Visible = true;
                 }
-                FlowLayoutPanel_TransportServices.Visible = true;
+                else
+                {
+                    dt_just_grab = dt;
+                    if (dt.Rows.Count > 0)
+                    {
+                        FlowLayoutPanel_TransportServices.Visible = false;
+                        Panel_JustGrab.Visible = true;
+                        Label_DriverName_JustGrab.Text = dt.Rows[0]["GRAB_CAR_DRIVER_NAME"].ToString();
+                        Label_DriverAge_JustGrab.Text = dt.Rows[0]["GRAB_CAR_DRIVER_AGE"].ToString();
+                        Label_ServiceCategory_JustGrab.Text = Label_ServiceName.Text;
+                        Label_Seats_JustGrab.Text = dt.Rows[0]["GRAB_CAR_SEATS"].ToString();
+                        Label_Cost_JustGrab.Text = dt.Rows[0]["GRAB_CAR_COST"].ToString() + ".000";
+                        Label_WaitingTime.Text = dt.Rows[0]["GRAB_CAR_START"].ToString() + " - " + dt.Rows[0]["GRAB_CAR_END"].ToString() + " mins";
+                    }
+                }
             }
         }
 
@@ -263,6 +289,108 @@ namespace Grab.Screens
         {
             Notification_Form frm = new Notification_Form();
             frm.showAlert(msg, type);
+        }
+
+        private void Button_4_JustGrab_Click(object sender, EventArgs e)
+        {
+            double distance = Convert.ToDouble(Label_Distance.Text.Remove(Label_Distance.Text.Length - 2).ToString());
+            int min_cost = 0;
+            int max_cost = 0;
+            if (distance < 200.0)
+            {
+                min_cost = 200;
+                max_cost = 400;
+            }
+            else if (distance < 800.0)
+            {
+                min_cost = 400;
+                max_cost = 600;
+            }
+            else if (distance < 2000.0)
+            {
+                min_cost = 600;
+                max_cost = 800;
+            }
+            else
+            {
+                min_cost = 600;
+                max_cost = 800;
+            }
+            string query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost} and GRAB_CAR_SEATS = 4 order by GRAB_CAR_COST asc";
+            dt_just_grab = provider.ExecuteQuery(query);
+            if (dt_just_grab.Rows.Count > 0)
+            {
+                FlowLayoutPanel_TransportServices.Visible = false;
+                Panel_JustGrab.Visible = true;
+                Label_DriverName_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_DRIVER_NAME"].ToString();
+                Label_DriverAge_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_DRIVER_AGE"].ToString();
+                Label_ServiceCategory_JustGrab.Text = Label_ServiceName.Text;
+                Label_Seats_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_SEATS"].ToString();
+                Label_Cost_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_COST"].ToString() + ".000";
+                Label_WaitingTime.Text = dt_just_grab.Rows[0]["GRAB_CAR_START"].ToString() + " - " + dt_just_grab.Rows[0]["GRAB_CAR_END"].ToString() + " mins";
+            }
+        }
+
+        private void Button_7_JustGrab_Click(object sender, EventArgs e)
+        {
+            double distance = Convert.ToDouble(Label_Distance.Text.Remove(Label_Distance.Text.Length - 2).ToString());
+            int min_cost = 0;
+            int max_cost = 0;
+            if (distance < 200.0)
+            {
+                min_cost = 200;
+                max_cost = 400;
+            }
+            else if (distance < 800.0)
+            {
+                min_cost = 400;
+                max_cost = 600;
+            }
+            else if (distance < 2000.0)
+            {
+                min_cost = 600;
+                max_cost = 800;
+            }
+            else
+            {
+                min_cost = 600;
+                max_cost = 800;
+            }
+            string query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost} and GRAB_CAR_SEATS = 7 order by GRAB_CAR_COST asc";
+            dt_just_grab = provider.ExecuteQuery(query);
+            if (dt_just_grab.Rows.Count > 0)
+            {
+                FlowLayoutPanel_TransportServices.Visible = false;
+                Panel_JustGrab.Visible = true;
+                Label_DriverName_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_DRIVER_NAME"].ToString();
+                Label_DriverAge_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_DRIVER_AGE"].ToString();
+                Label_ServiceCategory_JustGrab.Text = Label_ServiceName.Text;
+                Label_Seats_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_SEATS"].ToString();
+                Label_Cost_JustGrab.Text = dt_just_grab.Rows[0]["GRAB_CAR_COST"].ToString() + ".000";
+                Label_WaitingTime.Text = dt_just_grab.Rows[0]["GRAB_CAR_START"].ToString() + " - " + dt_just_grab.Rows[0]["GRAB_CAR_END"].ToString() + " mins";
+            }
+        }
+
+        private void Button_Booking_JustGrab_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_Confirm_Booking(Convert.ToDouble(Label_Distance.Text.Remove(Label_Distance.Text.Length - 2).ToString()), "JustGrab", dt_just_grab.Rows[0]));
+        }
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(childForm);
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

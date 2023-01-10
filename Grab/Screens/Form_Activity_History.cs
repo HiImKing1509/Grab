@@ -24,6 +24,7 @@ namespace Grab.Screens
         public Label label_cost;
         public Label label_location_start;
         public Label label_location_destination;
+        public Label label_distance;
 
         public Form_Activity_History()
         {
@@ -38,6 +39,7 @@ namespace Grab.Screens
             label_cost = Label_Cost;
             label_location_start = Label_LocationStart;
             label_location_destination = Label_LocationDestination;
+            label_distance = Label_Distance;
         }
 
         private void LoadHistory(string service)
@@ -46,7 +48,7 @@ namespace Grab.Screens
             string query = "";
             switch (service)
             {
-                case "GrabCar":
+                case "GrabCar": case "JustGrab":
                     query = $"select * " +
                         $"from HISTORY " +
                         $"inner join GRAB_CAR on HISTORY.SERVICE_ID = GRAB_CAR.GRAB_CAR_ID " +

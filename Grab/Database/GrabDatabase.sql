@@ -157,6 +157,7 @@ create table HISTORY (
 	PROVINCE_ID nvarchar(20) NOT NULL,
 	LOCATION_START nvarchar(255) NOT NULL,
 	LOCATION_END nvarchar(255) NOT NULL,
+	DISTANCE float NOT NULL,
 	SERVICE_TIME datetime,
 	SERVICE_EVALUATE_SCORE integer
 )
@@ -223,4 +224,6 @@ WHERE A.LOCATION_CODE_A like N'%%'
 	or A.LOCATION_CODE_F like N'%%'
 
 -- Select all GrabCar services
-select top 10 * from GRAB_CAR
+select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = 1 and GRAB_CAR_COST < 400 and GRAB_CAR_COST > 200 and GRAB_CAR_SEATS = 4 order by GRAB_CAR_COST asc
+
+select PROVINCE_CODE from PROVINCES

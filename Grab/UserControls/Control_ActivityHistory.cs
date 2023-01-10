@@ -64,7 +64,7 @@ namespace Grab.UserControls
 
         private void Control_ActivityHistory_Click(object sender, EventArgs e)
         {
-            if (_service == "GrabCar")
+            if (_service == "GrabCar" || _service == "JustGrab")
             {
                 Screens.Form_Activity_History.form_history.label_name_driver.Text = row["GRAB_CAR_DRIVER_NAME"].ToString();
                 Screens.Form_Activity_History.form_history.label_age_driver.Text = row["GRAB_CAR_DRIVER_AGE"].ToString();
@@ -75,6 +75,7 @@ namespace Grab.UserControls
                 Screens.Form_Activity_History.form_history.label_cost.Text = row["GRAB_CAR_COST"].ToString() + ".000";
                 Screens.Form_Activity_History.form_history.label_location_start.Text = row["LOCATION_START"].ToString();
                 Screens.Form_Activity_History.form_history.label_location_destination.Text = row["LOCATION_END"].ToString();
+                Screens.Form_Activity_History.form_history.label_distance.Text = row["DISTANCE"].ToString() + "km";
             }
             else if (_service == "GrabBike")
             {
@@ -86,6 +87,7 @@ namespace Grab.UserControls
                 Screens.Form_Activity_History.form_history.label_cost.Text = row["GRAB_BIKE_COST"].ToString() + ".000";
                 Screens.Form_Activity_History.form_history.label_location_start.Text = row["LOCATION_START"].ToString();
                 Screens.Form_Activity_History.form_history.label_location_destination.Text = row["LOCATION_END"].ToString();
+                Screens.Form_Activity_History.form_history.label_distance.Text = row["DISTANCE"].ToString() + "km";
             }
         }
     }
