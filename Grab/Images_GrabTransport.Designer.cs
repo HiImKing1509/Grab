@@ -93,6 +93,16 @@ namespace Grab {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GrabWaiting {
+            get {
+                object obj = ResourceManager.GetObject("GrabWaiting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GT01 {
             get {
                 object obj = ResourceManager.GetObject("GT01", resourceCulture);

@@ -100,6 +100,40 @@ namespace Grab.Screens
                 Label_LocationStart.ForeColor = Color.Green;
                 Label_LocationDestination.ForeColor = Color.Green;
                 Label_Distance.ForeColor = Color.Green;
+                int num = 5;
+                if (Assets.Variables.UtilsFunction.Start_id_province == 1 || Assets.Variables.UtilsFunction.Start_id_province == 48 || Assets.Variables.UtilsFunction.Start_id_province == 79)
+                    num = 20;
+                Label_Distance.Text = (Assets.Variables.StringProcessing.MeterToKilometer(
+                    Assets.Variables.UtilsFunction.distanceLocation(
+                    Assets.Variables.UtilsFunction.Start_location_lat,
+                    Assets.Variables.UtilsFunction.Start_location_long,
+                    Assets.Variables.UtilsFunction.End_location_lat,
+                    Assets.Variables.UtilsFunction.End_location_long)) + Assets.Variables.UtilsFunction.randomDouble(num)).ToString() + "km";
+
+                double distance = Convert.ToDouble(Label_Distance.Text.Remove(Label_Distance.Text.Length - 2).ToString());
+                int min_cost = 0;
+                int max_cost = 0;
+                if (distance < 200.0)
+                {
+                    min_cost = 200;
+                    max_cost = 400;
+                }
+                else if (distance < 800.0)
+                {
+                    min_cost = 400;
+                    max_cost = 600;
+                }
+                else if (distance < 2000.0)
+                {
+                    min_cost = 600;
+                    max_cost = 800;
+                }
+                else
+                {
+                    min_cost = 600;
+                    max_cost = 800;
+                }
+
                 // Web browser
 
                 string start = Assets.Variables.StringProcessing.convertToUnSign3(TextBox_LocationStartSearch.Text);
@@ -112,33 +146,36 @@ namespace Grab.Screens
                 // Transport Services
                 FlowLayoutPanel_TransportServices.Controls.Clear();
 
-                int num_vehicles = 5;
-                switch (Assets.Variables.UtilsFunction.Start_id_province)
-                {
-                    case 1: case 79:
-                        if (Label_ServiceName.Text == "GrabCar")
-                            num_vehicles = 8;
-                        else if (Label_ServiceName.Text == "GrabBike")
-                            num_vehicles = 5;
-                        break;
-                    default:
-                        if (Label_ServiceName.Text == "GrabCar")
-                            num_vehicles = 5;
-                        else if (Label_ServiceName.Text == "GrabBike")
-                            num_vehicles = 4;
-                        break;
-                }
+                //int num_vehicles = 5;
+                //switch (Assets.Variables.UtilsFunction.Start_id_province)
+                //{
+                //    case 1: case 79:
+                //        if (Label_ServiceName.Text == "GrabCar")
+                //            num_vehicles = 8;
+                //        else if (Label_ServiceName.Text == "GrabBike")
+                //            num_vehicles = 5;
+                //        break;
+                //    default:
+                //        if (Label_ServiceName.Text == "GrabCar")
+                //            num_vehicles = 5;
+                //        else if (Label_ServiceName.Text == "GrabBike")
+                //            num_vehicles = 4;
+                //        break;
+                //}
 
                 switch (Label_ServiceName.Text)
                 {
                     case "GrabCar":
-                        query = $"select top {num_vehicles} * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost}";
                         break;
                     case "GrabBike":
-                        query = $"select top {num_vehicles} * from GRAB_BIKE where GRAB_BIKE_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        query = $"select * from GRAB_BIKE where GRAB_BIKE_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_BIKE_COST < {max_cost} and GRAB_BIKE_COST > {min_cost}";
                         break;
                     default:
-                        query = $"select top {num_vehicles} * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province}";
+                        query = $"select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = {Assets.Variables.UtilsFunction.Start_id_province} " +
+                            $"and GRAB_CAR_COST < {max_cost} and GRAB_CAR_COST > {min_cost}";
                         break;
                 }
 
@@ -155,12 +192,6 @@ namespace Grab.Screens
                     FlowLayoutPanel_TransportServices.Controls.Add(item);
                 }
                 FlowLayoutPanel_TransportServices.Visible = true;
-                Label_Distance.Text = Assets.Variables.StringProcessing.MeterToKilometer(
-                    Assets.Variables.UtilsFunction.distanceLocation(
-                    Assets.Variables.UtilsFunction.Start_location_lat,
-                    Assets.Variables.UtilsFunction.Start_location_long,
-                    Assets.Variables.UtilsFunction.End_location_lat,
-                    Assets.Variables.UtilsFunction.End_location_long)).ToString() + "km";
             }
         }
 

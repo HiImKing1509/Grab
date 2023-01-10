@@ -72,13 +72,15 @@ create table GRAB_CATEGORY (
 )
 go
 
-create table GRAB_CUSTOMER (
-	GRAB_CUSTOMER_ID char(4),
-	GRAB_CUSTOMER_NAME nvarchar(100),
-	GRAB_CUSTOMER_PHONE_NUMBER nvarchar(11),
-	GRAB_CUSTOMER_PASSWORD nvarchar(50),
-	constraint PK_CUSTOMER primary key (GRAB_CUSTOMER_ID)
+create table CUSTOMER (
+	CUSTOMER_PHONE_NUMBER nvarchar(11),
+	CUSTOMER_PASSWORD nvarchar(50),
+	CUSTOMER_NAME nvarchar(100),
+	CUSTOMER_EMAIL nvarchar(50),
+	constraint PK_CUSTOMER primary key (CUSTOMER_PHONE_NUMBER)
 )
+go
+
 
 -- CREATE provinces TABLE
 create table PROVINCES (
@@ -133,6 +135,7 @@ create table GRAB_CAR (
 	GRAB_CAR_NUMBER nvarchar(10) NOT NULL,
 	GRAB_CAR_DRIVER_NAME nvarchar(255) NOT NULL,
 	GRAB_CAR_DRIVER_AGE integer NOT NULL,
+	GRAB_CAR_SCORE integer NOT NULL
 )
 
 create table GRAB_BIKE (
@@ -145,8 +148,23 @@ create table GRAB_BIKE (
 	GRAB_BIKE_NUMBER nvarchar(10) NOT NULL,
 	GRAB_BIKE_DRIVER_NAME nvarchar(255) NOT NULL,
 	GRAB_BIKE_DRIVER_AGE integer NOT NULL,
+	GRAB_BIKE_SCORE integer NOT NULL,
 )
 
+create table HISTORY (
+	SERVICE_ID char(4) NOT NULL,
+	CUSTOMER_ID char(4) NOT NULL,
+	PROVINCE_ID nvarchar(20) NOT NULL,
+	LOCATION_START nvarchar(255) NOT NULL,
+	LOCATION_END nvarchar(255) NOT NULL,
+	SERVICE_TIME datetime,
+	SERVICE_EVALUATE_SCORE integer
+)
+
+INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, SERVICE_TIME, SERVICE_EVALUATE_SCORE)
+
+
+drop table HISTORY
 
 -- Drop Table
 drop table GRAB_CAR
@@ -205,4 +223,4 @@ WHERE A.LOCATION_CODE_A like N'%%'
 	or A.LOCATION_CODE_F like N'%%'
 
 -- Select all GrabCar services
-select * from GRAB_CAR where GRAB_CAR_ID_PROVINCE = 1 and 
+select top 10 * from GRAB_CAR

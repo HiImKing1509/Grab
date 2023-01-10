@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.Button_About = new FontAwesome.Sharp.IconButton();
             this.Button_Account = new FontAwesome.Sharp.IconButton();
@@ -38,6 +39,8 @@
             this.Panel_Image = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Header = new System.Windows.Forms.Panel();
+            this.circlePictureBox1 = new Grab.CustomControls.CirclePictureBox();
+            this.Button_UserInformation = new FontAwesome.Sharp.IconButton();
             this.Button_Minimize = new FontAwesome.Sharp.IconButton();
             this.Button_Maximum = new FontAwesome.Sharp.IconButton();
             this.Button_Close = new FontAwesome.Sharp.IconButton();
@@ -45,11 +48,17 @@
             this.Button_Search = new FontAwesome.Sharp.IconButton();
             this.TextBox_LocationSearch = new System.Windows.Forms.TextBox();
             this.Panel_Body = new System.Windows.Forms.Panel();
+            this.DropdownMenu_LoadUserInformation = new Grab.CustomControls.CustomDropdownMenu(this.components);
+            this.ToolStripMenuItem_Profile = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_ChanePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Image.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel_Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            this.DropdownMenu_LoadUserInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -226,6 +235,8 @@
             // 
             // Panel_Header
             // 
+            this.Panel_Header.Controls.Add(this.circlePictureBox1);
+            this.Panel_Header.Controls.Add(this.Button_UserInformation);
             this.Panel_Header.Controls.Add(this.Button_Minimize);
             this.Panel_Header.Controls.Add(this.Button_Maximum);
             this.Panel_Header.Controls.Add(this.Button_Close);
@@ -235,6 +246,42 @@
             this.Panel_Header.Name = "Panel_Header";
             this.Panel_Header.Size = new System.Drawing.Size(1589, 140);
             this.Panel_Header.TabIndex = 1;
+            // 
+            // circlePictureBox1
+            // 
+            this.circlePictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.circlePictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
+            this.circlePictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox1.BorderSize = 2;
+            this.circlePictureBox1.GradientAngle = 50F;
+            this.circlePictureBox1.Location = new System.Drawing.Point(1225, 67);
+            this.circlePictureBox1.Name = "circlePictureBox1";
+            this.circlePictureBox1.Size = new System.Drawing.Size(59, 59);
+            this.circlePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circlePictureBox1.TabIndex = 8;
+            this.circlePictureBox1.TabStop = false;
+            // 
+            // Button_UserInformation
+            // 
+            this.Button_UserInformation.BackColor = System.Drawing.Color.Transparent;
+            this.Button_UserInformation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_UserInformation.FlatAppearance.BorderSize = 0;
+            this.Button_UserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_UserInformation.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_UserInformation.ForeColor = System.Drawing.Color.White;
+            this.Button_UserInformation.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_UserInformation.IconColor = System.Drawing.Color.Black;
+            this.Button_UserInformation.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_UserInformation.Location = new System.Drawing.Point(1290, 67);
+            this.Button_UserInformation.Name = "Button_UserInformation";
+            this.Button_UserInformation.Size = new System.Drawing.Size(287, 54);
+            this.Button_UserInformation.TabIndex = 7;
+            this.Button_UserInformation.Text = "Huỳnh Viết Tuấn Kiệt";
+            this.Button_UserInformation.UseVisualStyleBackColor = false;
+            this.Button_UserInformation.Click += new System.EventHandler(this.Button_UserInformation_Click);
+            this.Button_UserInformation.MouseEnter += new System.EventHandler(this.Button_UserInformation_MouseEnter);
+            this.Button_UserInformation.MouseLeave += new System.EventHandler(this.Button_UserInformation_MouseLeave);
             // 
             // Button_Minimize
             // 
@@ -347,6 +394,47 @@
             this.Panel_Body.Size = new System.Drawing.Size(1589, 893);
             this.Panel_Body.TabIndex = 2;
             // 
+            // DropdownMenu_LoadUserInformation
+            // 
+            this.DropdownMenu_LoadUserInformation.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.DropdownMenu_LoadUserInformation.IsMainMenu = false;
+            this.DropdownMenu_LoadUserInformation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Profile,
+            this.ToolStripMenuItem_ChanePassword,
+            this.ToolStripMenuItem_LogOut});
+            this.DropdownMenu_LoadUserInformation.MenuItemHeight = 25;
+            this.DropdownMenu_LoadUserInformation.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.DropdownMenu_LoadUserInformation.Name = "DropdownMenu_LoadUserInformation";
+            this.DropdownMenu_LoadUserInformation.PrimaryColor = System.Drawing.Color.Empty;
+            this.DropdownMenu_LoadUserInformation.Size = new System.Drawing.Size(211, 168);
+            // 
+            // ToolStripMenuItem_Profile
+            // 
+            this.ToolStripMenuItem_Profile.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripMenuItem_Profile.Margin = new System.Windows.Forms.Padding(0, 10, 0, 5);
+            this.ToolStripMenuItem_Profile.Name = "ToolStripMenuItem_Profile";
+            this.ToolStripMenuItem_Profile.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_Profile.Text = "Profile";
+            this.ToolStripMenuItem_Profile.Click += new System.EventHandler(this.ToolStripMenuItem_Profile_Click);
+            // 
+            // ToolStripMenuItem_ChanePassword
+            // 
+            this.ToolStripMenuItem_ChanePassword.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripMenuItem_ChanePassword.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.ToolStripMenuItem_ChanePassword.Name = "ToolStripMenuItem_ChanePassword";
+            this.ToolStripMenuItem_ChanePassword.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_ChanePassword.Text = "Đổi mật khẩu";
+            this.ToolStripMenuItem_ChanePassword.Click += new System.EventHandler(this.ToolStripMenuItem_ChanePassword_Click);
+            // 
+            // ToolStripMenuItem_LogOut
+            // 
+            this.ToolStripMenuItem_LogOut.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripMenuItem_LogOut.Margin = new System.Windows.Forms.Padding(0, 5, 0, 10);
+            this.ToolStripMenuItem_LogOut.Name = "ToolStripMenuItem_LogOut";
+            this.ToolStripMenuItem_LogOut.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_LogOut.Text = "Log out";
+            this.ToolStripMenuItem_LogOut.Click += new System.EventHandler(this.ToolStripMenuItem_LogOut_Click);
+            // 
             // Form_Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -363,8 +451,10 @@
             this.Panel_Image.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Panel_Header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.DropdownMenu_LoadUserInformation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,5 +478,11 @@
         private FontAwesome.Sharp.IconButton Button_Minimize;
         private FontAwesome.Sharp.IconButton Button_Maximum;
         private FontAwesome.Sharp.IconButton Button_Close;
+        private CustomControls.CirclePictureBox circlePictureBox1;
+        private FontAwesome.Sharp.IconButton Button_UserInformation;
+        private CustomControls.CustomDropdownMenu DropdownMenu_LoadUserInformation;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Profile;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ChanePassword;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_LogOut;
     }
 }

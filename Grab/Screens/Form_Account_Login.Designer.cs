@@ -30,8 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelGradient1 = new Grab.CustomControls.PanelGradient();
+            this.Label_ErrorLogin = new System.Windows.Forms.Label();
             this.Button_Close = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Label_ForgotPassword = new System.Windows.Forms.Label();
             this.Button_Register = new FontAwesome.Sharp.IconButton();
             this.Button_Login = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,8 +63,9 @@
             // 
             this.panelGradient1.Angle = 30F;
             this.panelGradient1.BottomColor = System.Drawing.Color.Green;
+            this.panelGradient1.Controls.Add(this.Label_ErrorLogin);
             this.panelGradient1.Controls.Add(this.Button_Close);
-            this.panelGradient1.Controls.Add(this.label4);
+            this.panelGradient1.Controls.Add(this.Label_ForgotPassword);
             this.panelGradient1.Controls.Add(this.Button_Register);
             this.panelGradient1.Controls.Add(this.Button_Login);
             this.panelGradient1.Controls.Add(this.label3);
@@ -78,6 +80,20 @@
             this.panelGradient1.Size = new System.Drawing.Size(675, 724);
             this.panelGradient1.TabIndex = 1;
             this.panelGradient1.TopColor = System.Drawing.Color.White;
+            // 
+            // Label_ErrorLogin
+            // 
+            this.Label_ErrorLogin.AutoSize = true;
+            this.Label_ErrorLogin.BackColor = System.Drawing.Color.Transparent;
+            this.Label_ErrorLogin.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ErrorLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_ErrorLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Label_ErrorLogin.Location = new System.Drawing.Point(255, 436);
+            this.Label_ErrorLogin.Name = "Label_ErrorLogin";
+            this.Label_ErrorLogin.Size = new System.Drawing.Size(373, 23);
+            this.Label_ErrorLogin.TabIndex = 10;
+            this.Label_ErrorLogin.Text = "Thông tin chưa chính xác, vui lòng kiểm tra lại";
+            this.Label_ErrorLogin.Visible = false;
             // 
             // Button_Close
             // 
@@ -99,18 +115,19 @@
             this.Button_Close.MouseEnter += new System.EventHandler(this.Button_Close_MouseEnter);
             this.Button_Close.MouseLeave += new System.EventHandler(this.Button_Close_MouseLeave);
             // 
-            // label4
+            // Label_ForgotPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(110, 594);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 27);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Quên mật khẩu ";
+            this.Label_ForgotPassword.AutoSize = true;
+            this.Label_ForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.Label_ForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_ForgotPassword.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Label_ForgotPassword.Location = new System.Drawing.Point(110, 594);
+            this.Label_ForgotPassword.Name = "Label_ForgotPassword";
+            this.Label_ForgotPassword.Size = new System.Drawing.Size(161, 27);
+            this.Label_ForgotPassword.TabIndex = 8;
+            this.Label_ForgotPassword.Text = "Quên mật khẩu ";
+            this.Label_ForgotPassword.Click += new System.EventHandler(this.Label_ForgotPassword_Click);
             // 
             // Button_Register
             // 
@@ -231,9 +248,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(222, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 82);
+            this.label1.Size = new System.Drawing.Size(401, 82);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Đăng nhập";
+            this.label1.Text = "ĐĂNG NHẬP";
             // 
             // pictureBox1
             // 
@@ -278,9 +295,10 @@
         private System.Windows.Forms.TextBox TextBox_Password;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Label_ForgotPassword;
         private FontAwesome.Sharp.IconButton Button_Register;
         private FontAwesome.Sharp.IconButton Button_Login;
         private FontAwesome.Sharp.IconButton Button_Close;
+        private System.Windows.Forms.Label Label_ErrorLogin;
     }
 }

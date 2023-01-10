@@ -1,0 +1,28 @@
+﻿use Grab
+go
+
+set dateformat mdy
+select * from HISTORY
+join GRAB_BIKE on HISTORY.SERVICE_ID = GRAB_BIKE.GRAB_BIKE_ID 
+where HISTORY.SERVICE_ID like 'GB%' and GRAB_BIKE.GRAB_BIKE_ID_PROVINCE = HISTORY.PROVINCE_ID order by HISTORY.SERVICE_TIME desc
+
+truncate table HISTORY
+
+INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, PROVINCE_ID, LOCATION_START, LOCATION_END, SERVICE_TIME, SERVICE_EVALUATE_SCORE) VALUES
+	('GC01', 'CU01', 10, N'Hà Nội', N'SG', '12-18-2022 15:45:21', 2),
+	('GC02', 'CU01', 2, N'Hà Nội', N'SG','12-19-2022 15:45:21', 3),
+	('GC03', 'CU01', 6, N'Hà Nội', N'SG','12-20-2022 15:45:21', 1),
+	('GC04', 'CU01', 8, N'Hà Nội', N'SG','12-21-2022 15:45:21', 5),
+	('GC05', 'CU01', 10, N'Hà Nội', N'SG','12-22-2022 15:45:21', 5),
+	('GB01', 'CU01', 79, N'Hà Nội', N'SG','12-19-2022 15:45:21', 2);
+
+SELECT DATEADD(minute, 20, '12-18-2022 15:45:21') AS DateAdd;
+
+DECLARE @date1 DATE, @date2 VARCHAR(20);
+SET @date1='2022-01-01';
+SET @date2=GETDATE();
+IF @date1=@date2
+SELECT 'equal date'
+ELSE
+IF @date1<@date2 SELECT 'date2 is greater'
+ELSE SELECT 'date1 is greater';

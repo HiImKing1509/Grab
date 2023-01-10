@@ -17,6 +17,7 @@ namespace Grab.UserControls
         double lat = 0.0;
         double lon = 0.0;
         int num_id_province = 0;
+        Random rnd = new Random();
         public Control_Item_Recommendation()
         {
             // InitializeComponent();
@@ -26,7 +27,7 @@ namespace Grab.UserControls
         {
             InitializeComponent();
             Label_Location.Text = dr["LOCATION_RECOMMEDATION"].ToString();
-            PictureBox_Image.Name = dr["WARDS_CODE"].ToString();
+            PictureBox_Image.Name = dr["WARDS_CODE"].ToString() + rnd.Next().ToString();
             lat = Convert.ToDouble(dr["PROVINCE_LATITUDE"].ToString());
             lon = Convert.ToDouble(dr["PROVINCE_LONGITUDE"].ToString());
             num_id_province = Convert.ToInt16(dr["PROVINCE_CODE"].ToString());

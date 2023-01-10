@@ -1,17 +1,28 @@
-﻿using System;
+﻿using Grab.Database.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace Grab.Screens
 {
     public partial class Form_Confirm_Booking : Form
     {
+        private Form activeForm = null;
+        DataProvider provider = new DataProvider();
+        string service_id = "";
+
         public Form_Confirm_Booking()
         {
             // InitializeComponent();
@@ -25,6 +36,7 @@ namespace Grab.Screens
             switch (service)
             {
                 case "GrabCar":
+                    service_id = row["GRAB_CAR_ID"].ToString();
                     Label_ServiceName.Text = row["GRAB_CAR_NAME"].ToString();
                     Label_WaitingTime.Text = row["GRAB_CAR_START"].ToString() + " - " + row["GRAB_CAR_END"].ToString() + " mins";
                     Label_DriverName.Text = row["GRAB_CAR_DRIVER_NAME"].ToString();
@@ -41,6 +53,7 @@ namespace Grab.Screens
                     Label_Cost.Text = row["GRAB_CAR_COST"].ToString() + ".000";
                     break;
                 case "GrabBike":
+                    service_id = row["GRAB_BIKE_ID"].ToString();
                     Label_ServiceName.Text = row["GRAB_BIKE_NAME"].ToString();
                     Label_WaitingTime.Text = row["GRAB_BIKE_START"].ToString() + " - " + row["GRAB_BIKE_END"].ToString() + " mins";
                     Label_DriverName.Text = row["GRAB_BIKE_DRIVER_NAME"].ToString();
@@ -74,6 +87,31 @@ namespace Grab.Screens
         {
             Application.OpenForms.OfType<Form_Booking>().First().Show();
             Close();
+        }
+
+        private void Button_ServiceComfirm_Click(object sender, EventArgs e)
+        {
+            // Send mail
+            string query = $"INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, PROVINCE_ID, LOCATION_START, LOCATION_END, SERVICE_TIME, SERVICE_EVALUATE_SCORE) VALUES " +
+                $"('{service_id}', 'CU01', {Assets.Variables.UtilsFunction.Start_id_province}, N'{Assets.Variables.UtilsFunction.Start_location}', N'{Assets.Variables.UtilsFunction.End_location}', '{DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt")}', 0);";
+
+
+            openChildForm(new Form_Waiting_Booking());
+        }
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(childForm);
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

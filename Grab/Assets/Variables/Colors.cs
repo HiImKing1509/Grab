@@ -17,5 +17,6 @@ namespace Grab.Assets.Variables
         public static Color DarkGreen_x11 = ColorTranslator.FromHtml("#005500");
         public static Color MetallicYellow = ColorTranslator.FromHtml("#F9CC0B");
         public static Color UERed = ColorTranslator.FromHtml("#C00000");
+        public static Color SoftPeach = ColorTranslator.FromHtml("#F0E5E4");
     }
 }

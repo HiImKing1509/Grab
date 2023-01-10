@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grab.Database.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Grab.Screens
 {
     public partial class Form_Account_Login : Form
     {
+        DataProvider provider = new DataProvider();
+
         public Form_Account_Login()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace Grab.Screens
 
         private void TextBox_Account_Enter(object sender, EventArgs e)
         {
+            Label_ErrorLogin.Visible = false;
             if (TextBox_Account.Text == "Số điện thoại ..." && TextBox_Account.ForeColor == Color.Silver)
             {
                 TextBox_Account.Text = "";
@@ -38,6 +42,7 @@ namespace Grab.Screens
 
         private void TextBox_Password_Enter(object sender, EventArgs e)
         {
+            Label_ErrorLogin.Visible = false;
             if (TextBox_Password.Text == "Mật khẩu ..." && TextBox_Password.ForeColor == Color.Silver)
             {
                 TextBox_Password.UseSystemPasswordChar = true;
@@ -58,16 +63,31 @@ namespace Grab.Screens
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
-            Form HomeForm = new Form_Home();
-            Hide();
-            HomeForm.Show();
+            string query = $"select * " +
+                $"from CUSTOMER " +
+                $"where CUSTOMER_PHONE_NUMBER = '{TextBox_Account.Text}' COLLATE SQL_Latin1_General_CP1_CS_AS " +
+                $"and CUSTOMER_PASSWORD = '{TextBox_Password.Text}' COLLATE SQL_Latin1_General_CP1_CS_AS";
+            Assets.Variables.Account.DataTableAccount = provider.ExecuteQuery(query);
+            if (Assets.Variables.Account.DataTableAccount.Rows.Count > 0)
+            {
+                Form HomeForm = new Form_Home();
+                HomeForm.Show();
+                Close();
+            }
+            else
+            {
+                Label_ErrorLogin.Visible = true;
+                TextBox_Password.UseSystemPasswordChar = false;
+                TextBox_Password.Text = "Mật khẩu ...";
+                TextBox_Password.ForeColor = Color.Silver;
+            }
         }
 
         private void Button_Register_Click(object sender, EventArgs e)
         {
             Form RegisterForm = new Form_Account_Register();
-            Hide();
             RegisterForm.Show();
+            Close();
         }
 
         private void Button_Close_Click(object sender, EventArgs e)
@@ -85,6 +105,13 @@ namespace Grab.Screens
         {
             Button_Close.BackColor = Color.Transparent;
             Button_Close.IconColor = Color.White;
+        }
+
+        private void Label_ForgotPassword_Click(object sender, EventArgs e)
+        {
+            Form change_password = new Form_Forgot_Password();
+            change_password.Show();
+            Close();
         }
     }
 }

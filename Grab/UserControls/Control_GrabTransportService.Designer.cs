@@ -28,26 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PictureBox_Image = new System.Windows.Forms.PictureBox();
             this.Label_Name = new System.Windows.Forms.Label();
             this.Label_Cost = new System.Windows.Forms.Label();
             this.Label_Time = new System.Windows.Forms.Label();
             this.Label_Seat = new System.Windows.Forms.Label();
+            this.PictureBox_Image = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Image)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PictureBox_Image
-            // 
-            this.PictureBox_Image.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictureBox_Image.Image = global::Grab.Images_GrabTransport.GrabBike;
-            this.PictureBox_Image.Location = new System.Drawing.Point(11, 17);
-            this.PictureBox_Image.Name = "PictureBox_Image";
-            this.PictureBox_Image.Size = new System.Drawing.Size(89, 75);
-            this.PictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_Image.TabIndex = 0;
-            this.PictureBox_Image.TabStop = false;
-            this.PictureBox_Image.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
-            this.PictureBox_Image.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             // 
             // Label_Name
             // 
@@ -59,6 +46,7 @@
             this.Label_Name.Size = new System.Drawing.Size(248, 24);
             this.Label_Name.TabIndex = 1;
             this.Label_Name.Text = "GrabCar Bình Dương 4 chỗ";
+            this.Label_Name.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
             this.Label_Name.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
             this.Label_Name.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             // 
@@ -74,6 +62,7 @@
             this.Label_Cost.Size = new System.Drawing.Size(84, 27);
             this.Label_Cost.TabIndex = 3;
             this.Label_Cost.Text = "250.000";
+            this.Label_Cost.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
             this.Label_Cost.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
             this.Label_Cost.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             // 
@@ -88,6 +77,7 @@
             this.Label_Time.Size = new System.Drawing.Size(84, 20);
             this.Label_Time.TabIndex = 4;
             this.Label_Time.Text = "7 - 15 mins";
+            this.Label_Time.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
             this.Label_Time.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
             this.Label_Time.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             // 
@@ -102,8 +92,23 @@
             this.Label_Seat.Size = new System.Drawing.Size(56, 20);
             this.Label_Seat.TabIndex = 5;
             this.Label_Seat.Text = "4 seats";
+            this.Label_Seat.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
             this.Label_Seat.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
             this.Label_Seat.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
+            // 
+            // PictureBox_Image
+            // 
+            this.PictureBox_Image.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox_Image.Image = global::Grab.Images_GrabTransport.GrabBike;
+            this.PictureBox_Image.Location = new System.Drawing.Point(11, 17);
+            this.PictureBox_Image.Name = "PictureBox_Image";
+            this.PictureBox_Image.Size = new System.Drawing.Size(89, 75);
+            this.PictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Image.TabIndex = 0;
+            this.PictureBox_Image.TabStop = false;
+            this.PictureBox_Image.Click += new System.EventHandler(this.Control_GrabTransportService_Click);
+            this.PictureBox_Image.MouseEnter += new System.EventHandler(this.Control_GrabTransportService_MouseEnter);
+            this.PictureBox_Image.MouseLeave += new System.EventHandler(this.Control_GrabTransportService_MouseLeave);
             // 
             // Control_GrabTransportService
             // 

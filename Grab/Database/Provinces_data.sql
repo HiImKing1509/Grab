@@ -45,8 +45,8 @@ INSERT INTO PROVINCES (PROVINCE_CODE, PROVINCE_NAME, PROVINCE_NAME_ENG, PROVINCE
 	 ('44',N'Quảng Bình',N'Quang Binh',N'Tỉnh Quảng Bình',N'Quang Binh Province',N'quang binh',2,4, 18.05, 105.37),
 	 ('45',N'Quảng Trị',N'Quang Tri',N'Tỉnh Quảng Trị',N'Quang Tri Province',N'quang tri',2,4, 17.1, 104.24),
 	 ('46',N'Thừa Thiên Huế',N'Thua Thien Hue',N'Tỉnh Thừa Thiên Huế',N'Thua Thien Hue Province',N'thua thien hue',2,4, 16.4637, 107.5908),
-	 ('48',N'Đà Nẵng',N'Da Nang',N'Thành phố Đà Nẵng',N'Da Nang City',N'da nang',1,5, 16.1410, 18.2000),
-	 ('49',N'Quảng Nam',N'Quang Nam',N'Tỉnh Quảng Nam',N'Quang Nam Province',N'quang nam',2,5, 15.3843, 108.4404);
+	 ('48',N'Đà Nẵng',N'Da Nang',N'Thành phố Đà Nẵng',N'Da Nang City',N'da nang',1,5, 16.1410, 108.2000),
+	 ('49',N'Quảng Nam',N'Quang Nam',N'Tỉnh Quảng Nam',N'Quang Nam Province',N'quang nam',2,5, 15.3843, 108.2616);
 INSERT INTO PROVINCES (PROVINCE_CODE, PROVINCE_NAME, PROVINCE_NAME_ENG, PROVINCE_FULLNAME, PROVINCE_FULLNAME_ENG, PROVINCE_CODE_NAME, ADMIN_UNIT_ID, ADMIN_REGION_ID, PROVINCE_LATITUDE, PROVINCE_LONGITUDE) VALUES
 	 ('51',N'Quảng Ngãi',N'Quang Ngai',N'Tỉnh Quảng Ngãi',N'Quang Ngai Province',N'quang ngai',2,5, 15.1206, 108.7922),
 	 ('52',N'Bình Định',N'Binh Dinh',N'Tỉnh Bình Định',N'Binh Dinh Province',N'binh dinh',2,5, 13.54, 109.22),

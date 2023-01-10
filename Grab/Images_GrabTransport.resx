@@ -127,6 +127,9 @@
   <data name="GrabTaxi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\GrabTaxi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GrabWaiting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\GrabWaiting.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GT01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\GT01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

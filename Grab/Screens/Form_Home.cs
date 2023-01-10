@@ -40,6 +40,7 @@ namespace Grab.Screens
 
 
             leftBorderBtn = new Panel();
+            Button_UserInformation.Text = Assets.Variables.Account.DataTableAccount.Rows[0]["CUSTOMER_NAME"].ToString();
             leftBorderBtn.Size = new Size(7, Button_Home.Height);
             Panel_Menu.Controls.Add(leftBorderBtn);
             ActivateButton(Button_Home);
@@ -93,6 +94,7 @@ namespace Grab.Screens
         private void Button_Activity_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Form_Activity_History());
         }
 
         private void Button_Payment_Click(object sender, EventArgs e)
@@ -248,6 +250,54 @@ namespace Grab.Screens
                 ActivateButton(btn);
             //CloseForm();
             ActivateAllServices();
+        }
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(childForm);
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void Button_UserInformation_Click(object sender, EventArgs e)
+        {
+            DropdownMenu_LoadUserInformation.Show(Button_UserInformation, 0, Button_UserInformation.Height);
+        }
+
+        private void Button_UserInformation_MouseEnter(object sender, EventArgs e)
+        {
+            Button_UserInformation.BackColor = Color.Green;
+        }
+
+        private void Button_UserInformation_MouseLeave(object sender, EventArgs e)
+        {
+            Button_UserInformation.BackColor = Color.Transparent;
+        }
+
+        private void ToolStripMenuItem_LogOut_Click(object sender, EventArgs e)
+        {
+            Form form_login = new Form_Account_Login();
+            form_login.Show();
+            Close();
+            Assets.Variables.ListFormPanel.ListFormsPanel.Clear();
+        }
+
+        private void ToolStripMenuItem_Profile_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_User_Information());
+        }
+
+        private void ToolStripMenuItem_ChanePassword_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form_Change_Password());
         }
     }
 }

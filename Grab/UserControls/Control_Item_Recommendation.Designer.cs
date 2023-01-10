@@ -51,10 +51,10 @@
             // PictureBox_Image
             // 
             this.PictureBox_Image.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictureBox_Image.Image = global::Grab.Images_GrabIcon.Location;
-            this.PictureBox_Image.Location = new System.Drawing.Point(16, 13);
+            this.PictureBox_Image.Image = global::Grab.Images_GrabIcon.NoLocation;
+            this.PictureBox_Image.Location = new System.Drawing.Point(18, 15);
             this.PictureBox_Image.Name = "PictureBox_Image";
-            this.PictureBox_Image.Size = new System.Drawing.Size(30, 30);
+            this.PictureBox_Image.Size = new System.Drawing.Size(25, 25);
             this.PictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox_Image.TabIndex = 0;
             this.PictureBox_Image.TabStop = false;

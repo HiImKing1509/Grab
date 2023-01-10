@@ -46,9 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Label_NumberService = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Button_ServiceComfirm = new FontAwesome.Sharp.IconButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Label_LocationDestination = new System.Windows.Forms.Label();
             this.Label_LocationStart = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -60,9 +57,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.Label_WaitingTime = new System.Windows.Forms.Label();
             this.Button_ChangeLocation = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Button_ServiceComfirm = new FontAwesome.Sharp.IconButton();
             this.Panel_Information.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Information
@@ -283,44 +283,6 @@
             this.Label_NumberService.TabIndex = 22;
             this.Label_NumberService.Text = "20";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grab.Images_GrabUser.Driver;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 113);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Button_ServiceComfirm
-            // 
-            this.Button_ServiceComfirm.BackColor = System.Drawing.Color.Green;
-            this.Button_ServiceComfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_ServiceComfirm.FlatAppearance.BorderSize = 0;
-            this.Button_ServiceComfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_ServiceComfirm.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ServiceComfirm.ForeColor = System.Drawing.Color.White;
-            this.Button_ServiceComfirm.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Button_ServiceComfirm.IconColor = System.Drawing.Color.Black;
-            this.Button_ServiceComfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_ServiceComfirm.Location = new System.Drawing.Point(1116, 285);
-            this.Button_ServiceComfirm.Name = "Button_ServiceComfirm";
-            this.Button_ServiceComfirm.Size = new System.Drawing.Size(420, 54);
-            this.Button_ServiceComfirm.TabIndex = 7;
-            this.Button_ServiceComfirm.Text = "Xác nhận đặt xe";
-            this.Button_ServiceComfirm.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Grab.Images_GrabTransport.GrabCar;
-            this.pictureBox2.Location = new System.Drawing.Point(547, 112);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
             // Label_LocationDestination
             // 
             this.Label_LocationDestination.AutoSize = true;
@@ -446,6 +408,45 @@
             this.Button_ChangeLocation.UseVisualStyleBackColor = false;
             this.Button_ChangeLocation.Click += new System.EventHandler(this.Button_ChangeLocation_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grab.Images_GrabTransport.GrabCar;
+            this.pictureBox2.Location = new System.Drawing.Point(547, 112);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grab.Images_GrabUser.Driver;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Button_ServiceComfirm
+            // 
+            this.Button_ServiceComfirm.BackColor = System.Drawing.Color.Green;
+            this.Button_ServiceComfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_ServiceComfirm.FlatAppearance.BorderSize = 0;
+            this.Button_ServiceComfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_ServiceComfirm.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ServiceComfirm.ForeColor = System.Drawing.Color.White;
+            this.Button_ServiceComfirm.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_ServiceComfirm.IconColor = System.Drawing.Color.Black;
+            this.Button_ServiceComfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_ServiceComfirm.Location = new System.Drawing.Point(1116, 285);
+            this.Button_ServiceComfirm.Name = "Button_ServiceComfirm";
+            this.Button_ServiceComfirm.Size = new System.Drawing.Size(420, 54);
+            this.Button_ServiceComfirm.TabIndex = 7;
+            this.Button_ServiceComfirm.Text = "Xác nhận đặt xe";
+            this.Button_ServiceComfirm.UseVisualStyleBackColor = false;
+            this.Button_ServiceComfirm.Click += new System.EventHandler(this.Button_ServiceComfirm_Click);
+            // 
             // Form_Confirm_Booking
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -456,8 +457,8 @@
             this.Text = "Form_Confirm_Booking";
             this.Panel_Information.ResumeLayout(false);
             this.Panel_Information.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

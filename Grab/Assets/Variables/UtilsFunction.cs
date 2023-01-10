@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +39,40 @@ namespace Grab.Assets.Variables
             var eCoord = new GeoCoordinate(eLatitude, eLongitude);
 
             return (double)sCoord.GetDistanceTo(eCoord);
+        }
+
+        public static void sendEmail(string fromMail, string toMail, string subject, string body)
+        {
+            string fromPassword = "ktfhsxjlswuxcfeh";
+
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress(fromMail);
+            message.Subject = subject;
+            message.To.Add(new MailAddress(toMail));
+            //message.Body = "<html><body> From C# Winform </body></html>";
+            message.Body = $"<html><body> {body} </body></html>";
+            message.IsBodyHtml = true;
+
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(fromMail, fromPassword),
+                EnableSsl = true,
+            };
+
+            smtpClient.Send(message);
+        }
+
+        public static string randomString(int len)
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz0123456789";
+            return new string(Enumerable.Repeat(chars, len).Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        public static double randomDouble(int max)
+        {
+            return Math.Round(((new Random()).NextDouble() * max) + 1.0, 2);
         }
     }
 }
