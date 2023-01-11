@@ -31,8 +31,6 @@ namespace Grab.Screens
             Panel_Menu.BackColor = Assets.Variables.Colors.DarkGreen_x11;
             Panel_Body.BackColor = Assets.Variables.Colors.White;
 
-            Button_About.BackColor = Assets.Variables.Colors.DarkGreen_x11;
-            Button_Account.BackColor = Assets.Variables.Colors.DarkGreen_x11;
             Button_Activity.BackColor = Assets.Variables.Colors.DarkGreen_x11;
             Button_Home.BackColor = Assets.Variables.Colors.DarkGreen_x11;
             Button_Messages.BackColor = Assets.Variables.Colors.DarkGreen_x11;
@@ -100,11 +98,13 @@ namespace Grab.Screens
         private void Button_Payment_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Form_Rent_History());
         }
 
         private void Button_Messages_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Form_Evaluation());
         }
 
         private void Button_Account_Click(object sender, EventArgs e)
@@ -139,17 +139,6 @@ namespace Grab.Screens
             foreach (DataRow row in dtShowTransportService.Rows)
             {
                 Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(row["GRAB_ID"].ToString());
-                Control_Item_Service item = new Control_Item_Service(
-                    myImage,
-                    row
-                );
-                flpShowContent.Controls.Add(item);
-            }
-
-            flpShowContent.Controls.Add(new Control_Service(dtShowServiceCategory.Rows[1]));
-            foreach (DataRow row in dtShowDeliveryService.Rows)
-            {
-                Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_delivery.GetObject(row["GRAB_ID"].ToString());
                 Control_Item_Service item = new Control_Item_Service(
                     myImage,
                     row
@@ -298,6 +287,28 @@ namespace Grab.Screens
         private void ToolStripMenuItem_ChanePassword_Click(object sender, EventArgs e)
         {
             openChildForm(new Form_Change_Password());
+        }
+
+        private void TextBox_LocationSearch_TextChanged(object sender, EventArgs e)
+        {
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Clear();
+            string query = $"select * from GRAB_TRANSPORT where dbo.LanguageComprehension(GRAB_NAME) like '%{Assets.Variables.StringProcessing.convertToUnSign3(TextBox_LocationSearch.Text)}%'";
+            FlowLayoutPanel flpShowContent = new FlowLayoutPanel();
+            Assets.Variables.ListFormPanel.ListFormsPanel[0].Controls.Add(flpShowContent);
+            flpShowContent.Dock = DockStyle.Fill;
+            flpShowContent.AutoScroll = true;
+
+            DataProvider provider = new DataProvider();
+            DataTable dtShowServiceCategory = provider.ExecuteQuery(query);
+            foreach (DataRow row in dtShowServiceCategory.Rows)
+            {
+                Bitmap myImage = (Bitmap)Assets.Variables.ResourcesManager.rm_grab_transport.GetObject(row["GRAB_ID"].ToString());
+                Control_Item_Service item = new Control_Item_Service(
+                    myImage,
+                    row
+                );
+                flpShowContent.Controls.Add(item);
+            }
         }
     }
 }

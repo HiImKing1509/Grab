@@ -54,12 +54,20 @@ namespace Grab.UserControls
                 Assets.Variables.UtilsFunction.Start_location_long = lon;
                 Assets.Variables.UtilsFunction.Start_id_province = num_id_province;
             }
-            else
+            else if (num == 2)
             {
                 Screens.Form_Booking.form_booking.tbx2.Text = Label_Location.Text;
                 Assets.Variables.UtilsFunction.End_location = Label_Location.Text;
                 Assets.Variables.UtilsFunction.End_location_lat = lat;
                 Assets.Variables.UtilsFunction.End_location_long = lon;
+            }
+            else if (num == 3)
+            {
+                Screens.Form_Rent.form_rent.label_location.Text = Label_Location.Text;
+                Screens.Form_Rent.form_rent.label_location.ForeColor = Color.Green;
+                Screens.Form_Rent.form_rent.tbsearch.Text = Label_Location.Text;
+                Screens.Form_Rent.form_rent.tbsearch.ForeColor = Color.Black;
+                Assets.Variables.UtilsFunction.Rent_id_province = num_id_province;
             }
         }
     }

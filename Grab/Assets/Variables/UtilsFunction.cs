@@ -23,6 +23,8 @@ namespace Grab.Assets.Variables
         private static double distance = 0.0;
 
         private static int start_id_province = 0;
+        private static int rent_id_province = 0;
+        private static int evaluation_id_province = 0;
 
         public static string Start_location { get => start_location; set => start_location=value; }
         public static string End_location { get => end_location; set => end_location=value; }
@@ -32,6 +34,8 @@ namespace Grab.Assets.Variables
         public static double End_location_lat { get => end_location_lat; set => end_location_lat=value; }
         public static double End_location_long { get => end_location_long; set => end_location_long=value; }
         public static int Start_id_province { get => start_id_province; set => start_id_province=value; }
+        public static int Rent_id_province { get => rent_id_province; set => rent_id_province=value; }
+        public static int Evaluation_id_province { get => evaluation_id_province; set => evaluation_id_province=value; }
 
         public static double distanceLocation(double sLatitude, double sLongitude, double eLatitude, double eLongitude)
         {

@@ -64,6 +64,7 @@ namespace Grab.UserControls
 
         private void Control_ActivityHistory_Click(object sender, EventArgs e)
         {
+            Screens.Form_Activity_History.form_history.flp_infor.Visible = true;
             if (_service == "GrabCar" || _service == "JustGrab")
             {
                 Screens.Form_Activity_History.form_history.label_name_driver.Text = row["GRAB_CAR_DRIVER_NAME"].ToString();
@@ -76,6 +77,8 @@ namespace Grab.UserControls
                 Screens.Form_Activity_History.form_history.label_location_start.Text = row["LOCATION_START"].ToString();
                 Screens.Form_Activity_History.form_history.label_location_destination.Text = row["LOCATION_END"].ToString();
                 Screens.Form_Activity_History.form_history.label_distance.Text = row["DISTANCE"].ToString() + "km";
+                Screens.Form_Activity_History.form_history.label_nameservice.Text = row["GRAB_CAR_NAME"].ToString();
+                Screens.Form_Activity_History.form_history.label_time.Text = row["SERVICE_TIME"].ToString();
             }
             else if (_service == "GrabBike")
             {
@@ -88,7 +91,14 @@ namespace Grab.UserControls
                 Screens.Form_Activity_History.form_history.label_location_start.Text = row["LOCATION_START"].ToString();
                 Screens.Form_Activity_History.form_history.label_location_destination.Text = row["LOCATION_END"].ToString();
                 Screens.Form_Activity_History.form_history.label_distance.Text = row["DISTANCE"].ToString() + "km";
+                Screens.Form_Activity_History.form_history.label_nameservice.Text = row["GRAB_BIKE_NAME"].ToString();
+                Screens.Form_Activity_History.form_history.label_time.Text = row["SERVICE_TIME"].ToString();
             }
+            if (Convert.ToInt16(Screens.Form_Activity_History.form_history.b1.Name.Substring(1)) <= Convert.ToInt16(row["SERVICE_EVALUATE_SCORE"])) Screens.Form_Activity_History.form_history.b1.IconColor = Assets.Variables.Colors.MetallicYellow; else Screens.Form_Activity_History.form_history.b1.IconColor = Color.Black;
+            if (Convert.ToInt16(Screens.Form_Activity_History.form_history.b2.Name.Substring(1)) <= Convert.ToInt16(row["SERVICE_EVALUATE_SCORE"])) Screens.Form_Activity_History.form_history.b2.IconColor = Assets.Variables.Colors.MetallicYellow; else Screens.Form_Activity_History.form_history.b2.IconColor = Color.Black;
+            if (Convert.ToInt16(Screens.Form_Activity_History.form_history.b3.Name.Substring(1)) <= Convert.ToInt16(row["SERVICE_EVALUATE_SCORE"])) Screens.Form_Activity_History.form_history.b3.IconColor = Assets.Variables.Colors.MetallicYellow; else Screens.Form_Activity_History.form_history.b3.IconColor = Color.Black;
+            if (Convert.ToInt16(Screens.Form_Activity_History.form_history.b4.Name.Substring(1)) <= Convert.ToInt16(row["SERVICE_EVALUATE_SCORE"])) Screens.Form_Activity_History.form_history.b4.IconColor = Assets.Variables.Colors.MetallicYellow; else Screens.Form_Activity_History.form_history.b4.IconColor = Color.Black;
+            if (Convert.ToInt16(Screens.Form_Activity_History.form_history.b5.Name.Substring(1)) <= Convert.ToInt16(row["SERVICE_EVALUATE_SCORE"])) Screens.Form_Activity_History.form_history.b5.IconColor = Assets.Variables.Colors.MetallicYellow; else Screens.Form_Activity_History.form_history.b5.IconColor = Color.Black;
         }
     }
 }

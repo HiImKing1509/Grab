@@ -35,6 +35,7 @@ namespace Grab.Screens
         {
             InitializeComponent();
             row_global = row;
+            _distance = distance;
             Panel_Information.BackColor = Assets.Variables.Colors.MintGreen;
             LoadMap(Assets.Variables.UtilsFunction.Start_location, Assets.Variables.UtilsFunction.End_location);
             switch (service)
@@ -98,7 +99,7 @@ namespace Grab.Screens
         {
             // Send mail
             string query = $"INSERT INTO HISTORY (SERVICE_ID, CUSTOMER_ID, PROVINCE_ID, LOCATION_START, LOCATION_END, DISTANCE, SERVICE_TIME, SERVICE_EVALUATE_SCORE) VALUES " +
-                $"('{service_id}', '{Assets.Variables.Account.DataTableAccount.Rows[0]["CUSTOMER_PHONE_NUMBER"]}', {Assets.Variables.UtilsFunction.Start_id_province}, N'{Assets.Variables.UtilsFunction.Start_location}', {_distance}, N'{Assets.Variables.UtilsFunction.End_location}', '{DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt")}', 0);";
+                $"('{service_id}', '{Assets.Variables.Account.DataTableAccount.Rows[0]["CUSTOMER_PHONE_NUMBER"]}', {Assets.Variables.UtilsFunction.Start_id_province}, N'{Assets.Variables.UtilsFunction.Start_location}', N'{Assets.Variables.UtilsFunction.End_location}', {_distance} ,'{DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss tt")}', 0);";
             int a = provider.ExecuteNonQuery(query);
 
             openChildForm(new Form_Waiting_Booking(Label_ServiceCategory.Text, row_global));

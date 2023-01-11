@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Button_GrabBike = new FontAwesome.Sharp.IconButton();
-            this.Button_GrabCar = new FontAwesome.Sharp.IconButton();
             this.FlowLayoutPanel_LoadHistory = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Label_Time = new System.Windows.Forms.Label();
+            this.Label_Distance = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.FlowLayoutPanel_Stars = new System.Windows.Forms.FlowLayoutPanel();
-            this.B1 = new FontAwesome.Sharp.IconButton();
-            this.B2 = new FontAwesome.Sharp.IconButton();
-            this.B3 = new FontAwesome.Sharp.IconButton();
-            this.B4 = new FontAwesome.Sharp.IconButton();
-            this.B5 = new FontAwesome.Sharp.IconButton();
+            this.A1 = new FontAwesome.Sharp.IconButton();
+            this.A2 = new FontAwesome.Sharp.IconButton();
+            this.A3 = new FontAwesome.Sharp.IconButton();
+            this.A4 = new FontAwesome.Sharp.IconButton();
+            this.A5 = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.Label_LocationDestination = new System.Windows.Forms.Label();
@@ -64,64 +64,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Label_ServiceName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Label_NameService = new System.Windows.Forms.Label();
             this.Label_Service = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Label_Distance = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.Panel_SearchLocation = new Grab.CustomControls.PanelGradient();
+            this.Button_GrabBike = new FontAwesome.Sharp.IconButton();
+            this.Button_GrabCar = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.FlowLayoutPanel_Stars.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Panel_SearchLocation.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Button_GrabBike);
-            this.panel1.Controls.Add(this.Button_GrabCar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1613, 79);
-            this.panel1.TabIndex = 0;
-            // 
-            // Button_GrabBike
-            // 
-            this.Button_GrabBike.BackColor = System.Drawing.Color.Green;
-            this.Button_GrabBike.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_GrabBike.FlatAppearance.BorderSize = 0;
-            this.Button_GrabBike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_GrabBike.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_GrabBike.ForeColor = System.Drawing.Color.White;
-            this.Button_GrabBike.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Button_GrabBike.IconColor = System.Drawing.Color.Black;
-            this.Button_GrabBike.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_GrabBike.Location = new System.Drawing.Point(229, 12);
-            this.Button_GrabBike.Name = "Button_GrabBike";
-            this.Button_GrabBike.Size = new System.Drawing.Size(189, 54);
-            this.Button_GrabBike.TabIndex = 8;
-            this.Button_GrabBike.Text = "GrabBike";
-            this.Button_GrabBike.UseVisualStyleBackColor = false;
-            this.Button_GrabBike.Click += new System.EventHandler(this.Button_GrabBike_Click);
-            // 
-            // Button_GrabCar
-            // 
-            this.Button_GrabCar.BackColor = System.Drawing.Color.Green;
-            this.Button_GrabCar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_GrabCar.FlatAppearance.BorderSize = 0;
-            this.Button_GrabCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_GrabCar.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_GrabCar.ForeColor = System.Drawing.Color.White;
-            this.Button_GrabCar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.Button_GrabCar.IconColor = System.Drawing.Color.Black;
-            this.Button_GrabCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_GrabCar.Location = new System.Drawing.Point(34, 12);
-            this.Button_GrabCar.Name = "Button_GrabCar";
-            this.Button_GrabCar.Size = new System.Drawing.Size(189, 54);
-            this.Button_GrabCar.TabIndex = 7;
-            this.Button_GrabCar.Text = "GrabCar";
-            this.Button_GrabCar.UseVisualStyleBackColor = false;
-            this.Button_GrabCar.Click += new System.EventHandler(this.Button_GrabCar_Click);
             // 
             // FlowLayoutPanel_LoadHistory
             // 
@@ -134,6 +87,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Label_Time);
             this.panel2.Controls.Add(this.Label_Distance);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.FlowLayoutPanel_Stars);
@@ -166,92 +120,136 @@
             this.panel2.Size = new System.Drawing.Size(713, 747);
             this.panel2.TabIndex = 3;
             // 
+            // Label_Time
+            // 
+            this.Label_Time.AutoSize = true;
+            this.Label_Time.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_Time.Font = new System.Drawing.Font("Noto Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Time.ForeColor = System.Drawing.Color.DimGray;
+            this.Label_Time.Location = new System.Drawing.Point(503, 15);
+            this.Label_Time.Name = "Label_Time";
+            this.Label_Time.Size = new System.Drawing.Size(191, 23);
+            this.Label_Time.TabIndex = 10;
+            this.Label_Time.Text = "12-18-2022 15:45:21 PM";
+            // 
+            // Label_Distance
+            // 
+            this.Label_Distance.AutoSize = true;
+            this.Label_Distance.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.Label_Distance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Label_Distance.Location = new System.Drawing.Point(291, 598);
+            this.Label_Distance.MaximumSize = new System.Drawing.Size(450, 0);
+            this.Label_Distance.Name = "Label_Distance";
+            this.Label_Distance.Size = new System.Drawing.Size(69, 27);
+            this.Label_Distance.TabIndex = 55;
+            this.Label_Distance.Text = "0.0km";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(127, 598);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(158, 27);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "Quãng đường:";
+            // 
             // FlowLayoutPanel_Stars
             // 
-            this.FlowLayoutPanel_Stars.Controls.Add(this.B1);
-            this.FlowLayoutPanel_Stars.Controls.Add(this.B2);
-            this.FlowLayoutPanel_Stars.Controls.Add(this.B3);
-            this.FlowLayoutPanel_Stars.Controls.Add(this.B4);
-            this.FlowLayoutPanel_Stars.Controls.Add(this.B5);
-            this.FlowLayoutPanel_Stars.Location = new System.Drawing.Point(142, 650);
+            this.FlowLayoutPanel_Stars.Controls.Add(this.A1);
+            this.FlowLayoutPanel_Stars.Controls.Add(this.A2);
+            this.FlowLayoutPanel_Stars.Controls.Add(this.A3);
+            this.FlowLayoutPanel_Stars.Controls.Add(this.A4);
+            this.FlowLayoutPanel_Stars.Controls.Add(this.A5);
+            this.FlowLayoutPanel_Stars.Location = new System.Drawing.Point(131, 646);
             this.FlowLayoutPanel_Stars.Name = "FlowLayoutPanel_Stars";
-            this.FlowLayoutPanel_Stars.Size = new System.Drawing.Size(432, 85);
+            this.FlowLayoutPanel_Stars.Size = new System.Drawing.Size(413, 74);
             this.FlowLayoutPanel_Stars.TabIndex = 53;
             // 
-            // B1
+            // A1
             // 
-            this.B1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B1.FlatAppearance.BorderSize = 0;
-            this.B1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B1.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.B1.IconColor = System.Drawing.Color.Black;
-            this.B1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.B1.IconSize = 42;
-            this.B1.Location = new System.Drawing.Point(3, 3);
-            this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(80, 80);
-            this.B1.TabIndex = 13;
-            this.B1.UseVisualStyleBackColor = true;
+            this.A1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.A1.FlatAppearance.BorderSize = 0;
+            this.A1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A1.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.A1.IconColor = System.Drawing.Color.Black;
+            this.A1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.A1.Location = new System.Drawing.Point(3, 3);
+            this.A1.Name = "A1";
+            this.A1.Size = new System.Drawing.Size(75, 63);
+            this.A1.TabIndex = 0;
+            this.A1.UseVisualStyleBackColor = true;
+            this.A1.Click += new System.EventHandler(this.B1_Click);
+            this.A1.MouseEnter += new System.EventHandler(this.B1_MouseEnter);
+            this.A1.MouseLeave += new System.EventHandler(this.B1_MouseLeave);
             // 
-            // B2
+            // A2
             // 
-            this.B2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B2.FlatAppearance.BorderSize = 0;
-            this.B2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B2.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.B2.IconColor = System.Drawing.Color.Black;
-            this.B2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.B2.IconSize = 42;
-            this.B2.Location = new System.Drawing.Point(89, 3);
-            this.B2.Name = "B2";
-            this.B2.Size = new System.Drawing.Size(80, 80);
-            this.B2.TabIndex = 17;
-            this.B2.UseVisualStyleBackColor = true;
+            this.A2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.A2.FlatAppearance.BorderSize = 0;
+            this.A2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A2.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.A2.IconColor = System.Drawing.Color.Black;
+            this.A2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.A2.Location = new System.Drawing.Point(84, 3);
+            this.A2.Name = "A2";
+            this.A2.Size = new System.Drawing.Size(75, 63);
+            this.A2.TabIndex = 1;
+            this.A2.UseVisualStyleBackColor = true;
+            this.A2.Click += new System.EventHandler(this.B1_Click);
+            this.A2.MouseEnter += new System.EventHandler(this.B1_MouseEnter);
+            this.A2.MouseLeave += new System.EventHandler(this.B1_MouseLeave);
             // 
-            // B3
+            // A3
             // 
-            this.B3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B3.FlatAppearance.BorderSize = 0;
-            this.B3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B3.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.B3.IconColor = System.Drawing.Color.Black;
-            this.B3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.B3.IconSize = 42;
-            this.B3.Location = new System.Drawing.Point(175, 3);
-            this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(80, 80);
-            this.B3.TabIndex = 16;
-            this.B3.UseVisualStyleBackColor = true;
+            this.A3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.A3.FlatAppearance.BorderSize = 0;
+            this.A3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A3.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.A3.IconColor = System.Drawing.Color.Black;
+            this.A3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.A3.Location = new System.Drawing.Point(165, 3);
+            this.A3.Name = "A3";
+            this.A3.Size = new System.Drawing.Size(75, 63);
+            this.A3.TabIndex = 2;
+            this.A3.UseVisualStyleBackColor = true;
+            this.A3.Click += new System.EventHandler(this.B1_Click);
+            this.A3.MouseEnter += new System.EventHandler(this.B1_MouseEnter);
+            this.A3.MouseLeave += new System.EventHandler(this.B1_MouseLeave);
             // 
-            // B4
+            // A4
             // 
-            this.B4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B4.FlatAppearance.BorderSize = 0;
-            this.B4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B4.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.B4.IconColor = System.Drawing.Color.Black;
-            this.B4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.B4.IconSize = 42;
-            this.B4.Location = new System.Drawing.Point(261, 3);
-            this.B4.Name = "B4";
-            this.B4.Size = new System.Drawing.Size(80, 80);
-            this.B4.TabIndex = 15;
-            this.B4.UseVisualStyleBackColor = true;
+            this.A4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.A4.FlatAppearance.BorderSize = 0;
+            this.A4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A4.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.A4.IconColor = System.Drawing.Color.Black;
+            this.A4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.A4.Location = new System.Drawing.Point(246, 3);
+            this.A4.Name = "A4";
+            this.A4.Size = new System.Drawing.Size(75, 63);
+            this.A4.TabIndex = 3;
+            this.A4.UseVisualStyleBackColor = true;
+            this.A4.Click += new System.EventHandler(this.B1_Click);
+            this.A4.MouseEnter += new System.EventHandler(this.B1_MouseEnter);
+            this.A4.MouseLeave += new System.EventHandler(this.B1_MouseLeave);
             // 
-            // B5
+            // A5
             // 
-            this.B5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.B5.FlatAppearance.BorderSize = 0;
-            this.B5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B5.IconChar = FontAwesome.Sharp.IconChar.Star;
-            this.B5.IconColor = System.Drawing.Color.Black;
-            this.B5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.B5.IconSize = 42;
-            this.B5.Location = new System.Drawing.Point(347, 3);
-            this.B5.Name = "B5";
-            this.B5.Size = new System.Drawing.Size(80, 80);
-            this.B5.TabIndex = 14;
-            this.B5.UseVisualStyleBackColor = true;
+            this.A5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.A5.FlatAppearance.BorderSize = 0;
+            this.A5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A5.IconChar = FontAwesome.Sharp.IconChar.Star;
+            this.A5.IconColor = System.Drawing.Color.Black;
+            this.A5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.A5.Location = new System.Drawing.Point(327, 3);
+            this.A5.Name = "A5";
+            this.A5.Size = new System.Drawing.Size(75, 63);
+            this.A5.TabIndex = 4;
+            this.A5.UseVisualStyleBackColor = true;
+            this.A5.Click += new System.EventHandler(this.B1_Click);
+            this.A5.MouseEnter += new System.EventHandler(this.B1_MouseEnter);
+            this.A5.MouseLeave += new System.EventHandler(this.B1_MouseLeave);
             // 
             // panel5
             // 
@@ -280,9 +278,9 @@
             this.Label_LocationDestination.Location = new System.Drawing.Point(247, 552);
             this.Label_LocationDestination.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_LocationDestination.Name = "Label_LocationDestination";
-            this.Label_LocationDestination.Size = new System.Drawing.Size(230, 27);
+            this.Label_LocationDestination.Size = new System.Drawing.Size(102, 27);
             this.Label_LocationDestination.TabIndex = 51;
-            this.Label_LocationDestination.Text = "Vui lòng chọn điểm đến";
+            this.Label_LocationDestination.Text = "Điểm đến";
             // 
             // Label_LocationStart
             // 
@@ -292,9 +290,9 @@
             this.Label_LocationStart.Location = new System.Drawing.Point(246, 508);
             this.Label_LocationStart.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_LocationStart.Name = "Label_LocationStart";
-            this.Label_LocationStart.Size = new System.Drawing.Size(231, 27);
+            this.Label_LocationStart.Size = new System.Drawing.Size(137, 27);
             this.Label_LocationStart.TabIndex = 50;
-            this.Label_LocationStart.Text = "Vui lòng chọn điểm đón";
+            this.Label_LocationStart.Text = "Điểm bắt đầu";
             // 
             // label14
             // 
@@ -335,9 +333,9 @@
             this.Label_Cost.ForeColor = System.Drawing.Color.White;
             this.Label_Cost.Location = new System.Drawing.Point(303, 352);
             this.Label_Cost.Name = "Label_Cost";
-            this.Label_Cost.Size = new System.Drawing.Size(99, 32);
+            this.Label_Cost.Size = new System.Drawing.Size(52, 32);
             this.Label_Cost.TabIndex = 45;
-            this.Label_Cost.Text = "250.000";
+            this.Label_Cost.Text = "Giá";
             // 
             // pictureBox2
             // 
@@ -367,9 +365,9 @@
             this.Label_NumberService.Location = new System.Drawing.Point(302, 305);
             this.Label_NumberService.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_NumberService.Name = "Label_NumberService";
-            this.Label_NumberService.Size = new System.Drawing.Size(34, 27);
+            this.Label_NumberService.Size = new System.Drawing.Size(151, 27);
             this.Label_NumberService.TabIndex = 42;
-            this.Label_NumberService.Text = "20";
+            this.Label_NumberService.Text = "Biển số dịch vụ";
             // 
             // Seats
             // 
@@ -389,9 +387,9 @@
             this.Label_Seats.Location = new System.Drawing.Point(443, 256);
             this.Label_Seats.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_Seats.Name = "Label_Seats";
-            this.Label_Seats.Size = new System.Drawing.Size(34, 27);
+            this.Label_Seats.Size = new System.Drawing.Size(75, 27);
             this.Label_Seats.TabIndex = 40;
-            this.Label_Seats.Text = "20";
+            this.Label_Seats.Text = "Số ghế";
             // 
             // label8
             // 
@@ -453,9 +451,9 @@
             this.Label_DriverAge.Location = new System.Drawing.Point(204, 118);
             this.Label_DriverAge.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_DriverAge.Name = "Label_DriverAge";
-            this.Label_DriverAge.Size = new System.Drawing.Size(34, 27);
+            this.Label_DriverAge.Size = new System.Drawing.Size(52, 27);
             this.Label_DriverAge.TabIndex = 30;
-            this.Label_DriverAge.Text = "20";
+            this.Label_DriverAge.Text = "Tuổi";
             // 
             // Label_DriverName
             // 
@@ -465,9 +463,9 @@
             this.Label_DriverName.Location = new System.Drawing.Point(255, 77);
             this.Label_DriverName.MaximumSize = new System.Drawing.Size(450, 0);
             this.Label_DriverName.Name = "Label_DriverName";
-            this.Label_DriverName.Size = new System.Drawing.Size(227, 27);
+            this.Label_DriverName.Size = new System.Drawing.Size(129, 27);
             this.Label_DriverName.TabIndex = 29;
-            this.Label_DriverName.Text = "Dương Khắc Khánh Hội";
+            this.Label_DriverName.Text = "Họ tên tài xế";
             // 
             // panel4
             // 
@@ -522,19 +520,19 @@
             this.Label_ServiceName.Text = "LỊCH SỬ HOẠT ĐỘNG";
             this.Label_ServiceName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // Label_NameService
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(837, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(587, 55);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "GrabCar 4 chỗ Bình Dương";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Label_NameService.AutoSize = true;
+            this.Label_NameService.BackColor = System.Drawing.Color.Transparent;
+            this.Label_NameService.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label_NameService.Font = new System.Drawing.Font("Noto Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_NameService.ForeColor = System.Drawing.Color.Green;
+            this.Label_NameService.Location = new System.Drawing.Point(837, 101);
+            this.Label_NameService.Name = "Label_NameService";
+            this.Label_NameService.Size = new System.Drawing.Size(249, 55);
+            this.Label_NameService.TabIndex = 7;
+            this.Label_NameService.Text = "Tên dịch vụ";
+            this.Label_NameService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Label_Service
             // 
@@ -550,59 +548,87 @@
             this.Label_Service.Text = "GRADCAR";
             this.Label_Service.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label9
+            // Panel_SearchLocation
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Noto Sans", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(127, 598);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 27);
-            this.label9.TabIndex = 54;
-            this.label9.Text = "Quãng đường:";
+            this.Panel_SearchLocation.Angle = 0F;
+            this.Panel_SearchLocation.BackColor = System.Drawing.Color.White;
+            this.Panel_SearchLocation.BottomColor = System.Drawing.Color.Empty;
+            this.Panel_SearchLocation.Controls.Add(this.Button_GrabBike);
+            this.Panel_SearchLocation.Controls.Add(this.Button_GrabCar);
+            this.Panel_SearchLocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_SearchLocation.Location = new System.Drawing.Point(0, 0);
+            this.Panel_SearchLocation.Name = "Panel_SearchLocation";
+            this.Panel_SearchLocation.Size = new System.Drawing.Size(1613, 87);
+            this.Panel_SearchLocation.TabIndex = 10;
+            this.Panel_SearchLocation.TopColor = System.Drawing.Color.White;
             // 
-            // Label_Distance
+            // Button_GrabBike
             // 
-            this.Label_Distance.AutoSize = true;
-            this.Label_Distance.Font = new System.Drawing.Font("Noto Sans", 12F);
-            this.Label_Distance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label_Distance.Location = new System.Drawing.Point(291, 598);
-            this.Label_Distance.MaximumSize = new System.Drawing.Size(450, 0);
-            this.Label_Distance.Name = "Label_Distance";
-            this.Label_Distance.Size = new System.Drawing.Size(80, 27);
-            this.Label_Distance.TabIndex = 55;
-            this.Label_Distance.Text = "20.0km";
+            this.Button_GrabBike.BackColor = System.Drawing.Color.Green;
+            this.Button_GrabBike.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_GrabBike.FlatAppearance.BorderSize = 0;
+            this.Button_GrabBike.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_GrabBike.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_GrabBike.ForeColor = System.Drawing.Color.White;
+            this.Button_GrabBike.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_GrabBike.IconColor = System.Drawing.Color.Black;
+            this.Button_GrabBike.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_GrabBike.Location = new System.Drawing.Point(283, 21);
+            this.Button_GrabBike.Name = "Button_GrabBike";
+            this.Button_GrabBike.Size = new System.Drawing.Size(189, 54);
+            this.Button_GrabBike.TabIndex = 8;
+            this.Button_GrabBike.Text = "GrabBike";
+            this.Button_GrabBike.UseVisualStyleBackColor = false;
+            this.Button_GrabBike.Click += new System.EventHandler(this.Button_GrabBike_Click);
+            // 
+            // Button_GrabCar
+            // 
+            this.Button_GrabCar.BackColor = System.Drawing.Color.Green;
+            this.Button_GrabCar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_GrabCar.FlatAppearance.BorderSize = 0;
+            this.Button_GrabCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_GrabCar.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_GrabCar.ForeColor = System.Drawing.Color.White;
+            this.Button_GrabCar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.Button_GrabCar.IconColor = System.Drawing.Color.Black;
+            this.Button_GrabCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_GrabCar.Location = new System.Drawing.Point(34, 21);
+            this.Button_GrabCar.Name = "Button_GrabCar";
+            this.Button_GrabCar.Size = new System.Drawing.Size(189, 54);
+            this.Button_GrabCar.TabIndex = 7;
+            this.Button_GrabCar.Text = "GrabCar";
+            this.Button_GrabCar.UseVisualStyleBackColor = false;
+            this.Button_GrabCar.Click += new System.EventHandler(this.Button_GrabCar_Click);
             // 
             // Form_Activity_History
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1613, 933);
+            this.Controls.Add(this.Panel_SearchLocation);
             this.Controls.Add(this.Label_Service);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Label_NameService);
             this.Controls.Add(this.Label_ServiceName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.FlowLayoutPanel_LoadHistory);
-            this.Controls.Add(this.panel1);
             this.Name = "Form_Activity_History";
             this.Text = "Form_Activity_History";
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.FlowLayoutPanel_Stars.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Panel_SearchLocation.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel_LoadHistory;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Label_ServiceName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Label_NameService;
         private FontAwesome.Sharp.IconButton Button_GrabBike;
         private FontAwesome.Sharp.IconButton Button_GrabCar;
         private System.Windows.Forms.Label Label_Service;
@@ -631,12 +657,14 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel_Stars;
-        private FontAwesome.Sharp.IconButton B1;
-        private FontAwesome.Sharp.IconButton B2;
-        private FontAwesome.Sharp.IconButton B3;
-        private FontAwesome.Sharp.IconButton B4;
-        private FontAwesome.Sharp.IconButton B5;
         private System.Windows.Forms.Label Label_Distance;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Label_Time;
+        private CustomControls.PanelGradient Panel_SearchLocation;
+        private FontAwesome.Sharp.IconButton A1;
+        private FontAwesome.Sharp.IconButton A2;
+        private FontAwesome.Sharp.IconButton A3;
+        private FontAwesome.Sharp.IconButton A4;
+        private FontAwesome.Sharp.IconButton A5;
     }
 }

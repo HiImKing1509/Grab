@@ -126,6 +126,8 @@
             this.B1.Size = new System.Drawing.Size(32, 32);
             this.B1.TabIndex = 13;
             this.B1.UseVisualStyleBackColor = true;
+            this.B1.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.B1.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // B5
             // 
@@ -141,6 +143,8 @@
             this.B5.Size = new System.Drawing.Size(32, 32);
             this.B5.TabIndex = 14;
             this.B5.UseVisualStyleBackColor = true;
+            this.B5.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.B5.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // B4
             // 
@@ -156,6 +160,8 @@
             this.B4.Size = new System.Drawing.Size(32, 32);
             this.B4.TabIndex = 15;
             this.B4.UseVisualStyleBackColor = true;
+            this.B4.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.B4.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // B3
             // 
@@ -171,6 +177,8 @@
             this.B3.Size = new System.Drawing.Size(32, 32);
             this.B3.TabIndex = 16;
             this.B3.UseVisualStyleBackColor = true;
+            this.B3.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.B3.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // B2
             // 
@@ -186,6 +194,8 @@
             this.B2.Size = new System.Drawing.Size(32, 32);
             this.B2.TabIndex = 17;
             this.B2.UseVisualStyleBackColor = true;
+            this.B2.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.B2.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // FlowLayoutPanel_Stars
             // 
@@ -198,6 +208,8 @@
             this.FlowLayoutPanel_Stars.Name = "FlowLayoutPanel_Stars";
             this.FlowLayoutPanel_Stars.Size = new System.Drawing.Size(196, 40);
             this.FlowLayoutPanel_Stars.TabIndex = 23;
+            this.FlowLayoutPanel_Stars.MouseEnter += new System.EventHandler(this.PictureBox_Image_MouseEnter);
+            this.FlowLayoutPanel_Stars.MouseLeave += new System.EventHandler(this.PictureBox_Image_MouseLeave);
             // 
             // Control_ActivityHistory
             // 

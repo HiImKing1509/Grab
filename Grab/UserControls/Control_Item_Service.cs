@@ -71,7 +71,10 @@ namespace Grab.UserControls
 
         private void ClickEvent()
         {
-            openChildForm(new Screens.Form_Booking(Label_Name.Text));
+            if (Label_Name.Text != "Rent")
+                openChildForm(new Screens.Form_Booking(Label_Name.Text));
+            else
+                openChildForm(new Screens.Form_Rent());
         }
     }
 }

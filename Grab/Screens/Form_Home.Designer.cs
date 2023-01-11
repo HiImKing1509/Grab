@@ -30,41 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Panel_Menu = new System.Windows.Forms.Panel();
-            this.Button_About = new FontAwesome.Sharp.IconButton();
-            this.Button_Account = new FontAwesome.Sharp.IconButton();
-            this.Button_Messages = new FontAwesome.Sharp.IconButton();
-            this.Button_Payment = new FontAwesome.Sharp.IconButton();
-            this.Button_Activity = new FontAwesome.Sharp.IconButton();
-            this.Button_Home = new FontAwesome.Sharp.IconButton();
             this.Panel_Image = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Header = new System.Windows.Forms.Panel();
-            this.circlePictureBox1 = new Grab.CustomControls.CirclePictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.TextBox_LocationSearch = new System.Windows.Forms.TextBox();
+            this.Panel_Body = new System.Windows.Forms.Panel();
             this.Button_UserInformation = new FontAwesome.Sharp.IconButton();
             this.Button_Minimize = new FontAwesome.Sharp.IconButton();
             this.Button_Maximum = new FontAwesome.Sharp.IconButton();
             this.Button_Close = new FontAwesome.Sharp.IconButton();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.Button_Search = new FontAwesome.Sharp.IconButton();
-            this.TextBox_LocationSearch = new System.Windows.Forms.TextBox();
-            this.Panel_Body = new System.Windows.Forms.Panel();
+            this.Button_Messages = new FontAwesome.Sharp.IconButton();
+            this.Button_Payment = new FontAwesome.Sharp.IconButton();
+            this.Button_Activity = new FontAwesome.Sharp.IconButton();
+            this.Button_Home = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.circlePictureBox1 = new Grab.CustomControls.CirclePictureBox();
             this.DropdownMenu_LoadUserInformation = new Grab.CustomControls.CustomDropdownMenu(this.components);
             this.ToolStripMenuItem_Profile = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_ChanePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Image.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Panel_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
             this.DropdownMenu_LoadUserInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Menu
             // 
-            this.Panel_Menu.Controls.Add(this.Button_About);
-            this.Panel_Menu.Controls.Add(this.Button_Account);
             this.Panel_Menu.Controls.Add(this.Button_Messages);
             this.Panel_Menu.Controls.Add(this.Button_Payment);
             this.Panel_Menu.Controls.Add(this.Button_Activity);
@@ -76,144 +72,6 @@
             this.Panel_Menu.Size = new System.Drawing.Size(312, 1033);
             this.Panel_Menu.TabIndex = 0;
             // 
-            // Button_About
-            // 
-            this.Button_About.BackColor = System.Drawing.Color.Transparent;
-            this.Button_About.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_About.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Button_About.FlatAppearance.BorderSize = 0;
-            this.Button_About.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_About.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_About.ForeColor = System.Drawing.Color.White;
-            this.Button_About.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            this.Button_About.IconColor = System.Drawing.Color.White;
-            this.Button_About.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_About.IconSize = 28;
-            this.Button_About.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_About.Location = new System.Drawing.Point(0, 971);
-            this.Button_About.Name = "Button_About";
-            this.Button_About.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_About.Size = new System.Drawing.Size(312, 62);
-            this.Button_About.TabIndex = 9;
-            this.Button_About.Text = "About me";
-            this.Button_About.UseVisualStyleBackColor = false;
-            this.Button_About.Click += new System.EventHandler(this.Button_About_Click);
-            // 
-            // Button_Account
-            // 
-            this.Button_Account.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Account.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Account.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_Account.FlatAppearance.BorderSize = 0;
-            this.Button_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Account.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Account.ForeColor = System.Drawing.Color.White;
-            this.Button_Account.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.Button_Account.IconColor = System.Drawing.Color.White;
-            this.Button_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_Account.IconSize = 28;
-            this.Button_Account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Account.Location = new System.Drawing.Point(0, 388);
-            this.Button_Account.Name = "Button_Account";
-            this.Button_Account.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_Account.Size = new System.Drawing.Size(312, 62);
-            this.Button_Account.TabIndex = 8;
-            this.Button_Account.Text = "Account";
-            this.Button_Account.UseVisualStyleBackColor = false;
-            this.Button_Account.Click += new System.EventHandler(this.Button_Account_Click);
-            // 
-            // Button_Messages
-            // 
-            this.Button_Messages.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Messages.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Messages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_Messages.FlatAppearance.BorderSize = 0;
-            this.Button_Messages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Messages.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Messages.ForeColor = System.Drawing.Color.White;
-            this.Button_Messages.IconChar = FontAwesome.Sharp.IconChar.Message;
-            this.Button_Messages.IconColor = System.Drawing.Color.White;
-            this.Button_Messages.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_Messages.IconSize = 28;
-            this.Button_Messages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Messages.Location = new System.Drawing.Point(0, 326);
-            this.Button_Messages.Name = "Button_Messages";
-            this.Button_Messages.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_Messages.Size = new System.Drawing.Size(312, 62);
-            this.Button_Messages.TabIndex = 7;
-            this.Button_Messages.Text = "Messages";
-            this.Button_Messages.UseVisualStyleBackColor = false;
-            this.Button_Messages.Click += new System.EventHandler(this.Button_Messages_Click);
-            // 
-            // Button_Payment
-            // 
-            this.Button_Payment.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Payment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Payment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_Payment.FlatAppearance.BorderSize = 0;
-            this.Button_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Payment.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Payment.ForeColor = System.Drawing.Color.White;
-            this.Button_Payment.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
-            this.Button_Payment.IconColor = System.Drawing.Color.White;
-            this.Button_Payment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_Payment.IconSize = 28;
-            this.Button_Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Payment.Location = new System.Drawing.Point(0, 264);
-            this.Button_Payment.Name = "Button_Payment";
-            this.Button_Payment.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_Payment.Size = new System.Drawing.Size(312, 62);
-            this.Button_Payment.TabIndex = 6;
-            this.Button_Payment.Text = "Payment";
-            this.Button_Payment.UseVisualStyleBackColor = false;
-            this.Button_Payment.Click += new System.EventHandler(this.Button_Payment_Click);
-            // 
-            // Button_Activity
-            // 
-            this.Button_Activity.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Activity.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Activity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_Activity.FlatAppearance.BorderSize = 0;
-            this.Button_Activity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Activity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Activity.ForeColor = System.Drawing.Color.White;
-            this.Button_Activity.IconChar = FontAwesome.Sharp.IconChar.ListSquares;
-            this.Button_Activity.IconColor = System.Drawing.Color.White;
-            this.Button_Activity.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_Activity.IconSize = 28;
-            this.Button_Activity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Activity.Location = new System.Drawing.Point(0, 202);
-            this.Button_Activity.Name = "Button_Activity";
-            this.Button_Activity.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_Activity.Size = new System.Drawing.Size(312, 62);
-            this.Button_Activity.TabIndex = 5;
-            this.Button_Activity.Text = "Activity";
-            this.Button_Activity.UseVisualStyleBackColor = false;
-            this.Button_Activity.Click += new System.EventHandler(this.Button_Activity_Click);
-            // 
-            // Button_Home
-            // 
-            this.Button_Home.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Home.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_Home.FlatAppearance.BorderSize = 0;
-            this.Button_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Home.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Home.ForeColor = System.Drawing.Color.White;
-            this.Button_Home.IconChar = FontAwesome.Sharp.IconChar.Compass;
-            this.Button_Home.IconColor = System.Drawing.Color.White;
-            this.Button_Home.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Button_Home.IconSize = 28;
-            this.Button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Home.Location = new System.Drawing.Point(0, 140);
-            this.Button_Home.Name = "Button_Home";
-            this.Button_Home.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Button_Home.Size = new System.Drawing.Size(312, 62);
-            this.Button_Home.TabIndex = 4;
-            this.Button_Home.Text = "Home";
-            this.Button_Home.UseVisualStyleBackColor = false;
-            this.Button_Home.Click += new System.EventHandler(this.Button_Home_Click);
-            // 
             // Panel_Image
             // 
             this.Panel_Image.Controls.Add(this.pictureBox1);
@@ -222,16 +80,6 @@
             this.Panel_Image.Name = "Panel_Image";
             this.Panel_Image.Size = new System.Drawing.Size(312, 140);
             this.Panel_Image.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grab.Images_GrabLogo.LG2_06;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Panel_Header
             // 
@@ -247,20 +95,39 @@
             this.Panel_Header.Size = new System.Drawing.Size(1589, 140);
             this.Panel_Header.TabIndex = 1;
             // 
-            // circlePictureBox1
+            // panel5
             // 
-            this.circlePictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circlePictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
-            this.circlePictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
-            this.circlePictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circlePictureBox1.BorderSize = 2;
-            this.circlePictureBox1.GradientAngle = 50F;
-            this.circlePictureBox1.Location = new System.Drawing.Point(1225, 67);
-            this.circlePictureBox1.Name = "circlePictureBox1";
-            this.circlePictureBox1.Size = new System.Drawing.Size(59, 59);
-            this.circlePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circlePictureBox1.TabIndex = 8;
-            this.circlePictureBox1.TabStop = false;
+            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.Button_Search);
+            this.panel5.Controls.Add(this.TextBox_LocationSearch);
+            this.panel5.Location = new System.Drawing.Point(62, 35);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(958, 54);
+            this.panel5.TabIndex = 1;
+            // 
+            // TextBox_LocationSearch
+            // 
+            this.TextBox_LocationSearch.BackColor = System.Drawing.Color.White;
+            this.TextBox_LocationSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_LocationSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.TextBox_LocationSearch.ForeColor = System.Drawing.Color.Gray;
+            this.TextBox_LocationSearch.Location = new System.Drawing.Point(14, 16);
+            this.TextBox_LocationSearch.Name = "TextBox_LocationSearch";
+            this.TextBox_LocationSearch.Size = new System.Drawing.Size(850, 25);
+            this.TextBox_LocationSearch.TabIndex = 0;
+            this.TextBox_LocationSearch.Text = "Tìm kiếm dịch vụ ...";
+            this.TextBox_LocationSearch.TextChanged += new System.EventHandler(this.TextBox_LocationSearch_TextChanged);
+            this.TextBox_LocationSearch.Enter += new System.EventHandler(this.TextBox_LocationSearch_Enter);
+            this.TextBox_LocationSearch.Leave += new System.EventHandler(this.TextBox_LocationSearch_Leave);
+            // 
+            // Panel_Body
+            // 
+            this.Panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Body.Location = new System.Drawing.Point(312, 140);
+            this.Panel_Body.Name = "Panel_Body";
+            this.Panel_Body.Size = new System.Drawing.Size(1589, 893);
+            this.Panel_Body.TabIndex = 2;
             // 
             // Button_UserInformation
             // 
@@ -343,17 +210,6 @@
             this.Button_Close.MouseEnter += new System.EventHandler(this.Button_Close_MouseEnter);
             this.Button_Close.MouseLeave += new System.EventHandler(this.Button_Close_MouseLeave);
             // 
-            // panel5
-            // 
-            this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.Button_Search);
-            this.panel5.Controls.Add(this.TextBox_LocationSearch);
-            this.panel5.Location = new System.Drawing.Point(62, 35);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(958, 54);
-            this.panel5.TabIndex = 1;
-            // 
             // Button_Search
             // 
             this.Button_Search.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -372,27 +228,123 @@
             this.Button_Search.MouseEnter += new System.EventHandler(this.Button_Search_MouseEnter);
             this.Button_Search.MouseLeave += new System.EventHandler(this.Button_Search_MouseLeave);
             // 
-            // TextBox_LocationSearch
+            // Button_Messages
             // 
-            this.TextBox_LocationSearch.BackColor = System.Drawing.Color.White;
-            this.TextBox_LocationSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBox_LocationSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            this.TextBox_LocationSearch.ForeColor = System.Drawing.Color.Gray;
-            this.TextBox_LocationSearch.Location = new System.Drawing.Point(14, 16);
-            this.TextBox_LocationSearch.Name = "TextBox_LocationSearch";
-            this.TextBox_LocationSearch.Size = new System.Drawing.Size(850, 25);
-            this.TextBox_LocationSearch.TabIndex = 0;
-            this.TextBox_LocationSearch.Text = "Tìm kiếm dịch vụ ...";
-            this.TextBox_LocationSearch.Enter += new System.EventHandler(this.TextBox_LocationSearch_Enter);
-            this.TextBox_LocationSearch.Leave += new System.EventHandler(this.TextBox_LocationSearch_Leave);
+            this.Button_Messages.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Messages.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Messages.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Messages.FlatAppearance.BorderSize = 0;
+            this.Button_Messages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Messages.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Messages.ForeColor = System.Drawing.Color.White;
+            this.Button_Messages.IconChar = FontAwesome.Sharp.IconChar.Message;
+            this.Button_Messages.IconColor = System.Drawing.Color.White;
+            this.Button_Messages.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Messages.IconSize = 28;
+            this.Button_Messages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Messages.Location = new System.Drawing.Point(0, 326);
+            this.Button_Messages.Name = "Button_Messages";
+            this.Button_Messages.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Button_Messages.Size = new System.Drawing.Size(312, 62);
+            this.Button_Messages.TabIndex = 7;
+            this.Button_Messages.Text = "Đánh giá";
+            this.Button_Messages.UseVisualStyleBackColor = false;
+            this.Button_Messages.Click += new System.EventHandler(this.Button_Messages_Click);
             // 
-            // Panel_Body
+            // Button_Payment
             // 
-            this.Panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Body.Location = new System.Drawing.Point(312, 140);
-            this.Panel_Body.Name = "Panel_Body";
-            this.Panel_Body.Size = new System.Drawing.Size(1589, 893);
-            this.Panel_Body.TabIndex = 2;
+            this.Button_Payment.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Payment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Payment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Payment.FlatAppearance.BorderSize = 0;
+            this.Button_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Payment.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Payment.ForeColor = System.Drawing.Color.White;
+            this.Button_Payment.IconChar = FontAwesome.Sharp.IconChar.CreditCardAlt;
+            this.Button_Payment.IconColor = System.Drawing.Color.White;
+            this.Button_Payment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Payment.IconSize = 28;
+            this.Button_Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Payment.Location = new System.Drawing.Point(0, 264);
+            this.Button_Payment.Name = "Button_Payment";
+            this.Button_Payment.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Button_Payment.Size = new System.Drawing.Size(312, 62);
+            this.Button_Payment.TabIndex = 6;
+            this.Button_Payment.Text = "Thuê";
+            this.Button_Payment.UseVisualStyleBackColor = false;
+            this.Button_Payment.Click += new System.EventHandler(this.Button_Payment_Click);
+            // 
+            // Button_Activity
+            // 
+            this.Button_Activity.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Activity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Activity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Activity.FlatAppearance.BorderSize = 0;
+            this.Button_Activity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Activity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Activity.ForeColor = System.Drawing.Color.White;
+            this.Button_Activity.IconChar = FontAwesome.Sharp.IconChar.ListSquares;
+            this.Button_Activity.IconColor = System.Drawing.Color.White;
+            this.Button_Activity.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Activity.IconSize = 28;
+            this.Button_Activity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Activity.Location = new System.Drawing.Point(0, 202);
+            this.Button_Activity.Name = "Button_Activity";
+            this.Button_Activity.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Button_Activity.Size = new System.Drawing.Size(312, 62);
+            this.Button_Activity.TabIndex = 5;
+            this.Button_Activity.Text = "Hoạt động";
+            this.Button_Activity.UseVisualStyleBackColor = false;
+            this.Button_Activity.Click += new System.EventHandler(this.Button_Activity_Click);
+            // 
+            // Button_Home
+            // 
+            this.Button_Home.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Home.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Home.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Home.FlatAppearance.BorderSize = 0;
+            this.Button_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Home.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Home.ForeColor = System.Drawing.Color.White;
+            this.Button_Home.IconChar = FontAwesome.Sharp.IconChar.Compass;
+            this.Button_Home.IconColor = System.Drawing.Color.White;
+            this.Button_Home.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Button_Home.IconSize = 28;
+            this.Button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Home.Location = new System.Drawing.Point(0, 140);
+            this.Button_Home.Name = "Button_Home";
+            this.Button_Home.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Button_Home.Size = new System.Drawing.Size(312, 62);
+            this.Button_Home.TabIndex = 4;
+            this.Button_Home.Text = "Trang chủ";
+            this.Button_Home.UseVisualStyleBackColor = false;
+            this.Button_Home.Click += new System.EventHandler(this.Button_Home_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grab.Images_GrabLogo.LG2_06;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(191, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // circlePictureBox1
+            // 
+            this.circlePictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circlePictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.circlePictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
+            this.circlePictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circlePictureBox1.BorderSize = 2;
+            this.circlePictureBox1.GradientAngle = 50F;
+            this.circlePictureBox1.Image = global::Grab.Images_GrabUser.Driver;
+            this.circlePictureBox1.Location = new System.Drawing.Point(1225, 67);
+            this.circlePictureBox1.Name = "circlePictureBox1";
+            this.circlePictureBox1.Size = new System.Drawing.Size(59, 59);
+            this.circlePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.circlePictureBox1.TabIndex = 8;
+            this.circlePictureBox1.TabStop = false;
             // 
             // DropdownMenu_LoadUserInformation
             // 
@@ -406,14 +358,14 @@
             this.DropdownMenu_LoadUserInformation.MenuItemTextColor = System.Drawing.Color.Empty;
             this.DropdownMenu_LoadUserInformation.Name = "DropdownMenu_LoadUserInformation";
             this.DropdownMenu_LoadUserInformation.PrimaryColor = System.Drawing.Color.Empty;
-            this.DropdownMenu_LoadUserInformation.Size = new System.Drawing.Size(211, 168);
+            this.DropdownMenu_LoadUserInformation.Size = new System.Drawing.Size(207, 140);
             // 
             // ToolStripMenuItem_Profile
             // 
             this.ToolStripMenuItem_Profile.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripMenuItem_Profile.Margin = new System.Windows.Forms.Padding(0, 10, 0, 5);
             this.ToolStripMenuItem_Profile.Name = "ToolStripMenuItem_Profile";
-            this.ToolStripMenuItem_Profile.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_Profile.Size = new System.Drawing.Size(206, 32);
             this.ToolStripMenuItem_Profile.Text = "Profile";
             this.ToolStripMenuItem_Profile.Click += new System.EventHandler(this.ToolStripMenuItem_Profile_Click);
             // 
@@ -422,7 +374,7 @@
             this.ToolStripMenuItem_ChanePassword.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripMenuItem_ChanePassword.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ToolStripMenuItem_ChanePassword.Name = "ToolStripMenuItem_ChanePassword";
-            this.ToolStripMenuItem_ChanePassword.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_ChanePassword.Size = new System.Drawing.Size(206, 32);
             this.ToolStripMenuItem_ChanePassword.Text = "Đổi mật khẩu";
             this.ToolStripMenuItem_ChanePassword.Click += new System.EventHandler(this.ToolStripMenuItem_ChanePassword_Click);
             // 
@@ -431,7 +383,7 @@
             this.ToolStripMenuItem_LogOut.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripMenuItem_LogOut.Margin = new System.Windows.Forms.Padding(0, 5, 0, 10);
             this.ToolStripMenuItem_LogOut.Name = "ToolStripMenuItem_LogOut";
-            this.ToolStripMenuItem_LogOut.Size = new System.Drawing.Size(210, 32);
+            this.ToolStripMenuItem_LogOut.Size = new System.Drawing.Size(206, 32);
             this.ToolStripMenuItem_LogOut.Text = "Log out";
             this.ToolStripMenuItem_LogOut.Click += new System.EventHandler(this.ToolStripMenuItem_LogOut_Click);
             // 
@@ -449,11 +401,11 @@
             this.Load += new System.EventHandler(this.Form_Home_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Image.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Panel_Header.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).EndInit();
             this.DropdownMenu_LoadUserInformation.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -464,8 +416,6 @@
         private System.Windows.Forms.Panel Panel_Menu;
         private System.Windows.Forms.Panel Panel_Image;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton Button_About;
-        private FontAwesome.Sharp.IconButton Button_Account;
         private FontAwesome.Sharp.IconButton Button_Messages;
         private FontAwesome.Sharp.IconButton Button_Payment;
         private FontAwesome.Sharp.IconButton Button_Activity;

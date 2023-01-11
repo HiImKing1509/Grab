@@ -150,11 +150,23 @@
     <Compile Include="Screens\Form_Change_Password.Designer.cs">
       <DependentUpon>Form_Change_Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Form_Comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Form_Comment.Designer.cs">
+      <DependentUpon>Form_Comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Form_Confirm_Booking.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Form_Confirm_Booking.Designer.cs">
       <DependentUpon>Form_Confirm_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Form_Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Form_Evaluation.Designer.cs">
+      <DependentUpon>Form_Evaluation.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Form_Forgot_Password.cs">
       <SubType>Form</SubType>
@@ -167,6 +179,18 @@
     </Compile>
     <Compile Include="Screens\Form_Home.Designer.cs">
       <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Form_Rent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Form_Rent.Designer.cs">
+      <DependentUpon>Form_Rent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Form_Rent_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Form_Rent_History.Designer.cs">
+      <DependentUpon>Form_Rent_History.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Form_User_Information.cs">
       <SubType>Form</SubType>
@@ -198,6 +222,18 @@
     <Compile Include="UserControls\Control_ActivityHistory.Designer.cs">
       <DependentUpon>Control_ActivityHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Control_Comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Comment.Designer.cs">
+      <DependentUpon>Control_Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Control_Driver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Driver.Designer.cs">
+      <DependentUpon>Control_Driver.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Control_GrabTransportService.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +251,18 @@
     </Compile>
     <Compile Include="UserControls\Control_Item_Service.Designer.cs">
       <DependentUpon>Control_Item_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Control_Province.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Province.Designer.cs">
+      <DependentUpon>Control_Province.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Control_Rent_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Control_Rent_History.Designer.cs">
+      <DependentUpon>Control_Rent_History.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Control_Service.cs">
       <SubType>UserControl</SubType>
@@ -271,14 +319,26 @@
     <EmbeddedResource Include="Screens\Form_Change_Password.resx">
       <DependentUpon>Form_Change_Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Comment.resx">
+      <DependentUpon>Form_Comment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_Confirm_Booking.resx">
       <DependentUpon>Form_Confirm_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Evaluation.resx">
+      <DependentUpon>Form_Evaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_Forgot_Password.resx">
       <DependentUpon>Form_Forgot_Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Rent.resx">
+      <DependentUpon>Form_Rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Form_Rent_History.resx">
+      <DependentUpon>Form_Rent_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Form_User_Information.resx">
       <DependentUpon>Form_User_Information.cs</DependentUpon>
@@ -295,6 +355,12 @@
     <EmbeddedResource Include="UserControls\Control_ActivityHistory.resx">
       <DependentUpon>Control_ActivityHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Comment.resx">
+      <DependentUpon>Control_Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Driver.resx">
+      <DependentUpon>Control_Driver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Control_GrabTransportService.resx">
       <DependentUpon>Control_GrabTransportService.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +369,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Control_Item_Service.resx">
       <DependentUpon>Control_Item_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Province.resx">
+      <DependentUpon>Control_Province.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Control_Rent_History.resx">
+      <DependentUpon>Control_Rent_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Control_Service.resx">
       <DependentUpon>Control_Service.cs</DependentUpon>

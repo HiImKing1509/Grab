@@ -42,3 +42,11 @@ D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_ActivityH
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Forgot_Password.resources
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_User_Information.resources
 D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Change_Password.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Rent.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Rent_History.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Rent_History.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Evaluation.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Driver.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Province.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.Screens.Form_Comment.resources
+D:\Workspace-Learning-C#\Grab\Grab\obj\Debug\Grab.UserControls.Control_Comment.resources
